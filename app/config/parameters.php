@@ -4,7 +4,7 @@
     'database_host' => 'localhost',
     'database_port' => '',
     'database_name' => 'asw01032024_asgarage',
-    'database_user' => 'asw01032024_asgarage',
+    'database_user' => 'asw01032024_asw01032024',
     'database_password' => 'IiSEtB|£4F}35I#D',
     'database_prefix' => 'ps_',
     'database_engine' => 'InnoDB',
