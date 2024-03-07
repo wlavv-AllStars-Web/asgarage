@@ -1,11 +1,11 @@
 <?php return array (
   'parameters' => 
   array (
-    'database_host' => '127.0.0.1',
+    'database_host' => 'localhost',
     'database_port' => '',
-    'database_name' => 'asgarage',
-    'database_user' => 'root',
-    'database_password' => '',
+    'database_name' => 'asw01032024_asgarage',
+    'database_user' => 'asw01032024_asgarage',
+    'database_password' => 'IiSEtB|£4F}35I#D',
     'database_prefix' => 'ps_',
     'database_engine' => 'InnoDB',
     'mailer_transport' => 'smtp',
