@@ -3,6 +3,8 @@
 /.htaccess
 *.log
 
+/app/config/parameters.php
+
 # Cache
 /cache/*
 !/cache/.htaccess
