@@ -30,7 +30,7 @@
         {block name='product_thumbnail'}
           {if $product.cover}
             <a href="{$product.url}" class="thumbnail product-thumbnail">
-              <picture>
+              {* <picture>
                 {if !empty($product.cover.bySize.home_default.sources.avif)}<source srcset="{$product.cover.bySize.home_default.sources.avif}" type="image/avif">{/if}
                 {if !empty($product.cover.bySize.home_default.sources.webp)}<source srcset="{$product.cover.bySize.home_default.sources.webp}" type="image/webp">{/if}
                 <img
@@ -41,7 +41,16 @@
                   width="{$product.cover.bySize.home_default.width}"
                   height="{$product.cover.bySize.home_default.height}"
                 />
-              </picture>
+              </picture> *}
+
+              {assign var='productimg' value=Tools::getProductsImgs($product.id_product)}  
+
+              {if isset($productimg[0]) && isset($productimg[1])}
+              <img  class="replace-2x img-responsive img_0"  src="{$link->getImageLink($product.link_rewrite,$product.id_product|cat:"-"|cat:$productimg[0].id_image, 'home_default')}" alt="{if !empty($product.legend)}{$product.legend|escape:'html':'UTF-8'}{else}{$product.name|escape:'html':'UTF-8'}{/if}" title="{if !empty($product.legend)}{$product.legend|escape:'html':'UTF-8'}{else}{$product.name|escape:'html':'UTF-8'}{/if}" {if isset($homeSize)} width="{$homeSize.width}" height="{$homeSize.height}"{/if} itemprop="image" />                                                              
+              <img class="replace-2x img-responsive img_1" src="{$link->getImageLink($product.link_rewrite,$product.id_product|cat:"-"|cat:$productimg[1].id_image, 'home_default')}" alt="{if !empty($product.legend)}{$product.legend|escape:'html':'UTF-8'}{else}{$product.name|escape:'html':'UTF-8'}{/if}" title="{if !empty($product.legend)}{$product.legend|escape:'html':'UTF-8'}{else}{$product.name|escape:'html':'UTF-8'}{/if}" {if isset($homeSize)} width="{$homeSize.width}" height="{$homeSize.height}"{/if}  />                                 
+            {else}
+              <img class="replace-2x img-responsive" src="{$link->getImageLink($product.link_rewrite, $product.id_image, 'home_default')|escape:'html':'UTF-8'}" alt="{if !empty($product.legend)}{$product.legend|escape:'html':'UTF-8'}{else}{$product.name|escape:'html':'UTF-8'}{/if}" title="{if !empty($product.legend)}{$product.legend|escape:'html':'UTF-8'}{else}{$product.name|escape:'html':'UTF-8'}{/if}" {if isset($homeSize)} width="{$homeSize.width}" height="{$homeSize.height}"{/if} itemprop="image" />
+            {/if}
             </a>
           {else}
             <a href="{$product.url}" class="thumbnail product-thumbnail">
@@ -59,7 +68,7 @@
           {/if}
         {/block}
 
-        <div class="highlighted-informations{if !$product.main_variants} no-variants{/if}">
+        {* <div class="highlighted-informations{if !$product.main_variants} no-variants{/if}">
           {block name='quick_view'}
             <a class="quick-view js-quick-view" href="#" data-link-action="quickview">
               <i class="material-icons search">&#xE8B6;</i> {l s='Quick view' d='Shop.Theme.Actions'}
@@ -71,7 +80,7 @@
               {include file='catalog/_partials/variant-links.tpl' variants=$product.main_variants}
             {/if}
           {/block}
-        </div>
+        </div> *}
       </div>
 
       <div class="product-description">
@@ -120,7 +129,7 @@
         {/block}
       </div>
 
-      {include file='catalog/_partials/product-flags.tpl'}
+      {* {include file='catalog/_partials/product-flags.tpl'} *}
     </div>
   </article>
 </div>

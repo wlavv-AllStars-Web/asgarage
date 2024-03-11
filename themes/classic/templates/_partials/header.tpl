@@ -84,7 +84,7 @@
           </div>
         </div>
         <div class="col-md-2" id="_desktop_logo" style="display: flex;justify-content:center;">
-        <img src="//thehamiltoncollection.com/cdn/shop/files/New_logo.png?v=1670879737" width="100" height="68">
+          <img src="//thehamiltoncollection.com/cdn/shop/files/New_logo.png?v=1670879737" width="100" height="68">
         </div>
         <div class="col-md-5" style="display: flex;justify-content:end;">
           <svg class="icon icon-cart-empty" aria-hidden="true" focusable="false" role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" fill="none">
@@ -119,7 +119,7 @@
 {/block}
 
 {block name='header_bottom'}
-  <div class="header-bottom">
+  {* <div class="header-bottom">
     <div class="container">
        <div class="row">
        <div class="header-bottom-content">
@@ -129,7 +129,7 @@
        </div>
        </div>
     </div>
-  </div>
+  </div> *}
   {hook h='displayNavFullWidth'}
 {/block}
 

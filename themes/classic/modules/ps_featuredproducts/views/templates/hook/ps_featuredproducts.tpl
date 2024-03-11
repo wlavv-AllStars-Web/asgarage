@@ -23,11 +23,16 @@
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  *}
 <section class="featured-products clearfix">
-  <h2 class="h2 products-section-title text-uppercase">
-    {l s='Popular Products' d='Shop.Theme.Catalog'}
-  </h2>
+<div class="container">
+  <h1 class="h2 products-section-title text-uppercase" style="margin: 2rem 0 1rem 0;font-weight: 700;text-align:start;font-size:3rem;color:#fff;">
+    {l s='Check Out Our Merch!' d='Shop.Theme.Featured'}
+  </h1>
+  <p class="h2 products-section-subtitle text-uppercase" style="margin-bottom: 2rem;color: #7a7a7a">
+    {l s='All Merch Proceeds are Donated to Charity!' d='Shop.Theme.Featured'}
+  </p>
   {include file="catalog/_partials/productlist.tpl" products=$products cssClass="row" productClass="col-xs-12 col-sm-6 col-lg-4 col-xl-3"}
   <a class="all-product-link float-xs-left float-md-right h4" href="{$allProductsLink}">
     {l s='All products' d='Shop.Theme.Catalog'}<i class="material-icons">&#xE315;</i>
   </a>
+</div>
 </section>

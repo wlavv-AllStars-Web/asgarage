@@ -27,12 +27,33 @@
     {block name='page_content_container'}
       
       <section id="content" class="page-home">
+        <div class="header-bottom" style="background: linear-gradient(310deg, rgb(56, 78, 197) 0%, rgba(255, 58, 129, 0.8) 52%, rgb(255, 201, 104) 100%);">
+          <div class="container">
+            <div class="row">
+            <div class="header-bottom-content">
+              <h1>Want to Drive a Hyper/Supercar from the Collection?</h1>
+              <h6>Sign up for a rental slot below!</h6>
+              <div class="btn">Schedule Rental Here!</div>
+            </div>
+            </div>
+          </div>
+        </div>
         {block name='page_content_top'}{/block}
-          
-        {block name='page_content'}
+          <div class="videoBox" style=""><div class="fullscreen-video-wrap" style="height: 754px;">
+              <video style="height: 754px;width:100%;object-fit:cover;" class="video-js" loop="" autoplay="" preload="none" muted="" playsinline="" poster="https://thehamiltoncollection.com/cdn/shop/files/Thumbnail.png?v=1664567119">
+                <source src="https://cdn.shopify.com/videos/c/o/v/466d9c8084dc46b5924f9153eb28807e.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="" style="background: #373737;padding:2rem 0">
+              <h1 style="color: #fafafa;text-align:center;font-size:3rem;">Driven to Give Back.</h1>
+              <h5 style="color: #c9c9c9;text-align:center;font-size:1.25rem;">To enrich the lives of others by providing unparalleled access to unique and exotic vehicles and to have a lot of fun while doing it.</h5>
+            </div>
+          </div>
+        {* {block name='page_content'}
           {block name='hook_home'}
             {$HOOK_HOME nofilter}
           {/block}
-        {/block}
+        {/block} *}
+        {hook h='displayHome' mod='ps_featuredproducts' id_module=13}
       </section>
     {/block}
