@@ -55,5 +55,18 @@
           {/block}
         {/block} *}
         {hook h='displayHome' mod='ps_featuredproducts' id_module=13}
+
+        <div class="container">
+          <div class="mission-journey" style="display:flex;background: #373737;max-height:464px;border-radius:18px;overflow:hidden;">
+            <div class="mission-journey-img" style="flex: 1;">
+              <img src="https://thehamiltoncollection.com/cdn/shop/files/website__4_Large_467d6ef1-c747-4e4e-8f97-7d3b5c56d1c7.jpg?v=1664430332&width=750" style="width: 100%;height:100%;object-fit:cover !important;"/>
+            </div>
+            <div class="mission-journey-content" style="flex: 1;text-align:center;display:flex;flex-direction:column;justify-content:center;">
+              <h1>{l s='Mission & Journey' d='Shop.Theme.Mission'}</h1>
+              <p>{l s='My mission for the collection now is simple: I am driven to give back. I put the cars to use by taking them out to charity events to help spread awareness or raise money for important causes. As the collection grows...' d='Shop.Theme.Mission'}</p>
+              <a>{l s='Read More' d='Shop.Theme.Mission'}</a>
+            </div>
+          </div>
+        </div>
       </section>
     {/block}
