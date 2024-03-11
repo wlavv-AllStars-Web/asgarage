@@ -170,3 +170,16 @@ a{
 .thumbnail-container:hover .product-title a {
   text-decoration: underline;
 }
+
+.container-all-product-link {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.featured-products .all-product-link{
+  color: #121212;
+  background: aqua;
+  padding: 1rem 2rem;
+  border-radius: 30px;
+}
