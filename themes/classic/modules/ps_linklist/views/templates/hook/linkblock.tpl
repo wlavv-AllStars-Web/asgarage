@@ -22,8 +22,8 @@
  * @copyright Since 2007 PrestaShop SA and Contributors
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  *}
-<div class="col-md-6 links">
-  <div class="row">
+<div class="col-md-12 links">
+  <div class="row" style="display: flex;">
   {foreach $linkBlocks as $linkBlock}
     <div class="col-md-6 wrapper">
       <p class="h3 hidden-sm-down">{$linkBlock.title}</p>

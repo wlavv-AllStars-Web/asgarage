@@ -23,19 +23,24 @@
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  *}
 
-<div class="block_newsletter col-lg-8 col-md-12 col-sm-12" id="blockEmailSubscription_{$hookName}">
-  <div class="row">
-    <p id="block-newsletter-label" class="col-md-5 col-xs-12">{l s='Get our latest news and special sales' d='Shop.Theme.Global'}</p>
+<div class="block_newsletter col-lg-8 col-md-12 col-sm-12" id="blockEmailSubscription_{$hookName}" style="background: #373737;">
+  <div class="row" style="display: flex;flex-direction:column;">
+    <p id="block-newsletter-label" class="col-md-5 col-xs-12">{l s='Subscribe to our emails' d='Shop.Theme.Global'}</p>
     <div class="col-md-7 col-xs-12">
       <form action="{$urls.current_url}#blockEmailSubscription_{$hookName}" method="post">
-        <div class="row">
-          <div class="col-xs-12">
-            <input
+        <div class="row newsletterSub">
+          <div class="col-xs-12 subscribeInput">
+            {* <input
               class="btn btn-primary float-xs-right hidden-xs-down"
               name="submitNewsletter"
               type="submit"
               value="{l s='Subscribe' d='Shop.Theme.Actions'}"
-            >
+            > *}
+            <button type="submit" class="btn btn-primary float-xs-right hidden-xs-down" name="submitNewsletter" id="Subscribe" aria-label="Subscribe">
+                    <svg viewBox="0 0 14 10" fill="none" aria-hidden="true" focusable="false" role="presentation" class="icon icon-arrow" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M8.537.808a.5.5 0 01.817-.162l4 4a.5.5 0 010 .708l-4 4a.5.5 0 11-.708-.708L11.793 5.5H1a.5.5 0 010-1h10.793L8.646 1.354a.5.5 0 01-.109-.546z" fill="currentColor">
+                    </path></svg>
+                  </button>
             <input
               class="btn btn-primary float-xs-right hidden-sm-up"
               name="submitNewsletter"
@@ -57,9 +62,9 @@
             <div class="clearfix"></div>
           </div>
           <div class="col-xs-12">
-              {if $conditions}
+              {* {if $conditions}
                 <p>{$conditions}</p>
-              {/if}
+              {/if} *}
               {if $msg}
                 <p class="alert {if $nw_error}alert-danger{else}alert-success{/if}">
                   {$msg}

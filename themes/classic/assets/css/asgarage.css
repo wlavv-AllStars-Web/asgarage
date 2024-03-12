@@ -183,3 +183,165 @@ a{
   padding: 1rem 2rem;
   border-radius: 30px;
 }
+
+.mission-journey {
+  display:flex;
+  background: #373737;
+  max-height:464px;
+  border-radius:18px;
+  overflow:hidden;
+  margin-top: 2rem;
+}
+
+.mission-journey .mission-journey-img {
+  flex: 1;
+}
+.mission-journey .mission-journey-content {
+  flex: 1;
+  text-align:center;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.mission-journey .mission-journey-content h1{
+  font-size: 2.5rem;
+  color: #fff;
+}
+.mission-journey .mission-journey-content p{
+  font-size: 1.25rem;
+  color: rgba(250,250,250,.75);
+  width: 80%;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 600;
+}
+.mission-journey .mission-journey-content a {
+  background: #fafafa;
+  padding: 0.5rem 1rem;
+  border-radius: 18px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: 500;
+  font-size: 1.25rem;
+  width: 164px;
+}
+
+.collection {
+  margin-top: 3rem;
+}
+.collection h1{
+  color: #fff;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+.collection .collection-content {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.collection .collection-content .card{
+  flex: 1;
+  background: #373737;
+  border-radius: 15px;
+  overflow: hidden;
+
+}
+.collection .collection-content .card img{
+  width: 100%;
+  height: 60%;
+  object-fit: cover;
+  transition: all 0.5s;
+}
+
+.collection .collection-content .card h3 {
+  color: #fff;
+  text-align: center;
+  background: #373737;
+  padding: 2rem 1rem;
+  height: 40%;
+  font-size: 1.4rem;
+}
+
+.collection .container-all-product-link{
+  margin-top: 2rem;
+}
+
+.collection .collection-content .card:hover img{
+  transform: scale(1.1);
+}
+
+.collection .container-all-product-link a{
+  color: #121212;
+  background: #7bebff;
+  padding: 1rem 2rem;
+  border-radius: 30px;
+  margin-bottom: 3rem;
+}
+
+#footer {
+  background: #373737;
+}
+#footer a{
+  color: #fff;
+}
+
+.footer-container .links .h3 {
+  color: #fafafa !important;
+  font-size: 1.2rem;
+}
+.footer-container .links a {
+  color: #fafafa !important;
+  font-size: 1rem;
+}
+.footer-container .links a:hover {
+  text-decoration: underline;
+}
+
+#block-newsletter-label {
+  color: #fff !important;
+}
+
+.newsletterSub .btn{
+  margin-left: 0 !important;
+  background: transparent;
+  border: 0 !important;
+}
+
+.newsletterSub .subscribeInput {
+  border: 0.5px solid white;
+  padding: 0;
+}
+.newsletterSub .subscribeInput input{
+  background: transparent;
+  color: #fff !important;
+  border: 0 !important;
+}
+.newsletterSub .subscribeInput input::placeholder{
+  color: #fff !important;
+}
+
+.block_newsletter form button[type="submit"] {
+  bottom: 0 !important;
+  height: 100%;
+}
+
+.footer-container .footer_after {
+  display: flex;
+  align-items: end;
+  margin-bottom: 2rem;
+}
+.footer-container .footer_after .block-social ul li{
+  background-color: transparent;
+  width: 40px;
+  height: 40px;
+  transition: transform 0.5s;
+  background-position: center;
+}
+
+.tiktok{background-image:url(../css/icons8-tiktok.svg)}
+
+.footer-container .footer_after .block-social ul li:hover {
+  transform: scale(1.2);
+}
