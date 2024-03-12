@@ -287,6 +287,10 @@ a{
   color: #fff;
 }
 
+.footer-container .links{
+  margin-bottom: 2rem;
+}
+
 .footer-container .links .h3 {
   color: #fafafa !important;
   font-size: 1.2rem;
@@ -344,4 +348,16 @@ a{
 
 .footer-container .footer_after .block-social ul li:hover {
   transform: scale(1.2);
+}
+
+.mission-journey-content .btn_read_more {
+  border: 2px solid #373737;
+  transition: border 0.25s;
+}
+.mission-journey-content .btn_read_more:hover {
+  border: 2px solid #fafafa;
+}
+
+.activeMenu {
+  text-decoration: underline;
 }

@@ -37,11 +37,12 @@
         </span>
       </div>
       <ul id="footer_sub_menu_{$linkBlock.id}" class="collapse">
+      
         {foreach $linkBlock.links as $link}
           <li>
             <a
                 id="{$link.id}-{$linkBlock.id}"
-                class="{$link.class}"
+                class="{$link.class} {if $smarty.server.REQUEST_URI == $link.url}activeMenu{/if}"
                 href="{$link.url}"
                 title="{$link.description}"
                 {if !empty($link.target)} target="{$link.target}" {/if}
