@@ -42,18 +42,18 @@ class IndexControllerCore extends FrontController
         $this->setTemplate('index');
     }
 
-    public function getProducts()
-    {
-        $categories = unserialize(Configuration::get('stickers'));
-        $output = array();
+    // public function getProducts()
+    // {
+    //     $categories = unserialize(Configuration::get('stickers'));
+    //     $output = array();
 
-        foreach ($categories as $id_category) {
-            $category = new Category($id_category, $this->context->language->id);
-            $products = $category->getProducts($this->context->language->id, 0, 10000);
-            $output = array_merge($output, $products);
-        }
+    //     foreach ($categories as $id_category) {
+    //         $category = new Category($id_category, $this->context->language->id);
+    //         $products = $category->getProducts($this->context->language->id, 0, 10000);
+    //         $output = array_merge($output, $products);
+    //     }
 
-        return $output;
-    }
+    //     return $output;
+    // }
 
 }
