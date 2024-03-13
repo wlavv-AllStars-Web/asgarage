@@ -34,6 +34,14 @@
     {block name='product_list_header'}
       <h1 id="js-product-list-header" class="h2">{$listing.label}</h1>
     {/block}
+    {assign var="currentUrl" value="http://"|cat:$smarty.server.HTTP_HOST|cat:$smarty.server.REQUEST_URI}
+ 
+    {if $currentUrl == $link->getCategoryLink(2)}
+    <div class="header-shop">
+      <h1>Limited Quantities!</h1>
+      <h3>Make sure to get some of these designs before they leave the collection!</h3>
+    </div>  
+    {/if}
 
     {block name='subcategory_list'}
       {if isset($subcategories) && $subcategories|@count > 0}
@@ -45,25 +53,24 @@
 
     <section id="products">
       {if $listing.products|count}
+          
+          {block name='product_list_top'}
+            {include file='catalog/_partials/products-top.tpl' listing=$listing}
+          {/block}
 
-        {block name='product_list_top'}
-          {include file='catalog/_partials/products-top.tpl' listing=$listing}
-        {/block}
+          {block name='product_list_active_filters'}
+            <div class="hidden-sm-down">
+              {$listing.rendered_active_filters nofilter}
+            </div>
+          {/block}
 
-        {block name='product_list_active_filters'}
-          <div class="hidden-sm-down">
-            {$listing.rendered_active_filters nofilter}
-          </div>
-        {/block}
+          {block name='product_list'}
+            {include file='catalog/_partials/products.tpl' listing=$listing productClass="col-xs-12 col-sm-6 col-xl-3"}
+          {/block}
 
-        {block name='product_list'}
-          {include file='catalog/_partials/products.tpl' listing=$listing productClass="col-xs-12 col-sm-6 col-xl-4"}
-        {/block}
-
-        {block name='product_list_bottom'}
-          {include file='catalog/_partials/products-bottom.tpl' listing=$listing}
-        {/block}
-
+          {block name='product_list_bottom'}
+            {include file='catalog/_partials/products-bottom.tpl' listing=$listing}
+          {/block}
       {else}
         <div id="js-product-list-top"></div>
 

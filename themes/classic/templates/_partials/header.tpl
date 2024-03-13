@@ -87,9 +87,7 @@
           <img src="//thehamiltoncollection.com/cdn/shop/files/New_logo.png?v=1670879737" width="100" height="68">
         </div>
         <div class="col-md-5" style="display: flex;justify-content:end;">
-          <svg class="icon icon-cart-empty" aria-hidden="true" focusable="false" role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" fill="none">
-            <path d="m15.75 11.8h-3.16l-.77 11.6a5 5 0 0 0 4.99 5.34h7.38a5 5 0 0 0 4.99-5.33l-.78-11.61zm0 1h-2.22l-.71 10.67a4 4 0 0 0 3.99 4.27h7.38a4 4 0 0 0 4-4.27l-.72-10.67h-2.22v.63a4.75 4.75 0 1 1 -9.5 0zm8.5 0h-7.5v.63a3.75 3.75 0 1 0 7.5 0z" fill="currentColor" fill-rule="evenodd"></path>
-          </svg>
+          {hook h='displayNav2' mod='ps_shoppingcart' id_module=9}
         </div>
         {* <div class="header-top-right col-md-10 col-sm-12 position-static">
           {hook h='displayTop'}
@@ -104,14 +102,15 @@
         </div>
       </div>
     </div>
+    {assign var="currentUrl" value="http://"|cat:$smarty.server.HTTP_HOST|cat:$smarty.server.REQUEST_URI}
+
     <div class="container">
         <ul class="menu-top">
-          <li><a class="active">Welcome</a></li>
-          <li><a>Shop</a></li>
-          <li><a>Collection</a></li>
-          <li><a>Mission & Journey</a></li>
-          <li><a>Contact</a></li>
-          <li><a>Giveaway</a></li>
+          <li><a class=" {if $currentUrl == "http://"|cat:$smarty.server.HTTP_HOST|cat:"/"}activeMenu{/if}" href="/">Welcome</a></li>
+          <li><a class=" {if $currentUrl == $link->getCategoryLink(2)|escape:'html':'UTF-8'}activeMenu{/if}" href="{$link->getCategoryLink(2)|escape:'html':'UTF-8'}">Shop</a></li>
+          <li><a href="{$link->getCMSLink(6)|escape:'html':'UTF-8'}">Collection</a></li>
+          <li><a href="{$link->getCMSLink(7)|escape:'html':'UTF-8'}">Mission & Journey</a></li>
+          <li><a href="{$link->getPageLink('contact',true)|escape:'html':'UTF-8'}">Contact</a></li>
         </ul>
     </div>
   </div>

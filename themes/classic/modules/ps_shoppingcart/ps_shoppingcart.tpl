@@ -24,13 +24,30 @@
  *}
 <div id="_desktop_cart">
   <div class="blockcart cart-preview {if $cart.products_count > 0}active{else}inactive{/if}" data-refresh-url="{$refresh_url}">
-    <div class="header">
+    <div class="header" style="position: relative;">
       {if $cart.products_count > 0}
         <a rel="nofollow" aria-label="{l s='Shopping cart link containing %nbProducts% product(s)' sprintf=['%nbProducts%' => $cart.products_count] d='Shop.Theme.Checkout'}" href="{$cart_url}">
       {/if}
-        <i class="material-icons shopping-cart" aria-hidden="true">shopping_cart</i>
-        <span class="hidden-sm-down">{l s='Cart' d='Shop.Theme.Checkout'}</span>
-        <span class="cart-products-count">({$cart.products_count})</span>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+        <span class="material-symbols-outlined" style="color: #fff;font-size:30px;">
+        shopping_bag
+        </span>
+        {* <span class="hidden-sm-down">{l s='Cart' d='Shop.Theme.Checkout'}</span> *}
+        {if $cart.products_count > 0}
+        <span class="cart-products-count" style="
+          position: absolute;
+          bottom: 0px;
+          right: 0;
+          background: lightblue;
+          color: #121212;
+          border-radius: 20px;
+          font-size: 1rem;
+          line-height: 1rem;
+          width: 1rem;
+          display: flex;
+          justify-content: center;
+          ">{$cart.products_count}</span>
+        {/if}
       {if $cart.products_count > 0}
         </a>
       {/if}

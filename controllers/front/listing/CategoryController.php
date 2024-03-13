@@ -303,4 +303,29 @@ class CategoryControllerCore extends ProductListingFrontController
             'Shop.Theme.Catalog'
         );
     }
+
+    public function getProducts()
+{
+    // Retrieve category IDs from the 'stickers' configuration setting
+    $categories = unserialize(Configuration::get('stickers'));
+    
+    // Initialize an empty array to store the products
+    $output = array();
+
+    // Iterate over each category ID
+    foreach ($categories as $id_category) {
+        // Create a Category object for the current category ID
+        $category = new Category($id_category, $this->context->language->id);
+        
+        // Fetch products belonging to the current category
+        $products = $category->getProducts($this->context->language->id, 0, 10000);
+        
+        // Merge the products into the $output array
+        $output = array_merge($output, $products);
+    }
+
+    // Return the array of products
+    return $output;
+}
+
 }
