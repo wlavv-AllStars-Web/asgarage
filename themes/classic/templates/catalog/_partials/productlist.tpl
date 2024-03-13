@@ -67,7 +67,7 @@
             {/foreach}
             </div>
         {/if}
-        <div class="more-imgs" style="display: flex;height:700px;">
+        <div class="more-imgs" style="display: flex;height:700px;width:100%;">
             <div class="img" style="flex: 1;">
                 <img src="//thehamiltoncollection.com/cdn/shop/files/imgonline-com-ua-compressed-Fg9EfWXPx5rBP6Q.jpg?v=1666732714&width=1500"  style="width: 100%;object-fit:cover;height:100%;object-position:center;"/>
             </div>
@@ -101,7 +101,7 @@
             {/foreach}
             </div>
         </div>
-        <div class="more-imgs" style="display: flex;height:700px;">
+        <div class="more-imgs" style="display: flex;height:700px;width:100%;">
             <div class="img" style="flex: 1;">
                 <img src="//thehamiltoncollection.com/cdn/shop/files/imgonline-com-ua-compressed-wED36Jkym1j.jpg?v=1666732715&width=1500"  style="width: 100%;object-fit:cover;height:100%;object-position:center;"/>
             </div>
