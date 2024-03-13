@@ -35,23 +35,6 @@ class DisplayOneProduct extends Module
         $this->registerHook('moduleRoutes');
     }
 
-    public function hookModuleRoutes($params)
-{
-    return array(
-        'module-displayoneproduct-addtocart' => array(
-            'controller' => 'addtocart',
-            'rule' => 'addtocart',
-            'keywords' => array(
-                'id_product' => array('regexp' => '[0-9]+', 'param' => 'id_product'),
-            ),
-            'params' => array(
-                'fc' => 'module',
-                'module' => 'displayoneproduct',
-            ),
-        ),
-    );
-}
-
     public function hookDisplayHome($params)
     {
         $productId = 7; // Change this to the ID of the product you want to display

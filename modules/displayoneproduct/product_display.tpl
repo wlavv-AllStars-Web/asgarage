@@ -8,8 +8,8 @@
         <h1 style="font-size: 3rem;color:#fff;margin-bottom:1rem;">{$product.name}</h1>
         <h5>€{$product.price} EUR</h5>
         <p><a href="{$link->getCMSLink(5)}" style="text-decoration: underline;">Shipping</a> calculated at checkout.</p>
-        <form action="http://192.168.1.64:82/cart" method="post" id="add-to-cart-or-refresh">
-            <input type="hidden" name="token" value="289e416786a67d6e12fd762ba201be83">
+        <form action="{"http://"|cat:$smarty.server.HTTP_HOST|cat:"/cart"}" method="post" id="add-to-cart-or-refresh">
+            {* <input type="hidden" name="token" value="289e416786a67d6e12fd762ba201be83"> *}
             <input type="hidden" name="id_product" value="{$product.product_id}" id="product_page_product_id">
             <input type="hidden" name="id_customization" value="0" id="product_customization_id" class="js-product-customization-id">
             <button class="btn btn-primary add-to-cart" data-button-action="add-to-cart" type="submit">
