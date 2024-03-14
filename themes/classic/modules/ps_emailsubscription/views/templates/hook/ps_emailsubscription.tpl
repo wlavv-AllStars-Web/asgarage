@@ -22,10 +22,13 @@
  * @copyright Since 2007 PrestaShop SA and Contributors
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  *}
-
+ {assign var="currentUrl" value="http://"|cat:$smarty.server.HTTP_HOST|cat:$smarty.server.REQUEST_URI}
 <div class="block_newsletter col-lg-8 col-md-12 col-sm-12" id="blockEmailSubscription_{$hookName}" style="background: #373737;">
   <div class="row" style="display: flex;flex-direction:column;">
     <p id="block-newsletter-label" class="col-md-5 col-xs-12">{l s='Subscribe to our emails' d='Shop.Theme.Global'}</p>
+    {if $currentUrl == $link->getCMSLink(7)|escape:'html':'UTF-8'}
+      <p  id="block-newsletter-secondlabel">Be the first to know about new collections and exclusive offers.</p>
+    {/if}
     <div class="col-md-7 col-xs-12">
       <form action="{$urls.current_url}#blockEmailSubscription_{$hookName}" method="post">
         <div class="row newsletterSub">

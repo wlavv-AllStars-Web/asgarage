@@ -56,21 +56,21 @@
         <div class="sticker-banner" style="width: 1440px;display:flex;margin:auto;">
             {hook h='displayHome' mod='displayoneproduct' id_module=28}
         </div>
-        {if $product.category == "stickers"}
-            <div class="stickers" style="width: 1440px;margin:auto;">
-            <h1 style="color: #fff;font-size: 3rem;text-align: start;padding: 2rem 0 1rem 4rem;">Stickers</h1>
-            
-            {foreach from=$products item="product" key="position"}
-                {* <pre>{$product|print_r}</pre> *}
-                {if $product.category == "stickers"}
+
+        <div class="stickers" style="width: 1440px;margin:auto;">
+        <h1 style="color: #fff;font-size: 3rem;text-align: start;padding: 2rem 0 1rem 4rem;">Stickers</h1>
+        
+        {foreach from=$products item="product" key="position"}
+            {* <pre>{$product|print_r}</pre> *}
+            {if $product.category == "stickers"}
+                
+                    {include file="catalog/_partials/miniatures/product.tpl" product=$product position=$position productClasses=$productClasses}
                     
-                        {include file="catalog/_partials/miniatures/product.tpl" product=$product position=$position productClasses=$productClasses}
-                        
-                    
-                {/if}
-            {/foreach}
-            </div>
-        {/if}
+                
+            {/if}
+        {/foreach}
+        </div>
+        
         <div class="more-imgs" style="display: flex;height:700px;width:100%;">
             <div class="img" style="flex: 1;">
                 <img src="//thehamiltoncollection.com/cdn/shop/files/imgonline-com-ua-compressed-Fg9EfWXPx5rBP6Q.jpg?v=1666732714&width=1500"  style="width: 100%;object-fit:cover;height:100%;object-position:center;"/>

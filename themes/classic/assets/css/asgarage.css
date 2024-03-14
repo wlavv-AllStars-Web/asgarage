@@ -650,3 +650,120 @@ a{
   transition: all 0.5s;
   width: 100%;
 }
+
+/* cms mission */
+
+.cms-id-7 .header-nav {
+  background:linear-gradient(310deg, rgba(56, 78, 197, 1) 23%, rgba(255, 58, 129, 0.8) 52%, rgba(255, 201, 104, 1) 95%);
+}
+.cms-id-7 .breadcrumb {
+  display: none !important;
+}
+.cms-id-7 #wrapper {
+  padding-top: 0 !important;
+}
+.cms-id-7 #content-wrapper {
+  padding: 0 !important;
+  background: #121212;
+}
+.cms-id-7 #content {
+  padding: 0 !important;
+}
+.cms-id-7 .collection_banner{
+  position: relative;
+}
+
+
+.cms-id-7 .mission_banner{
+  position: relative;
+  height: 600px;
+}
+.cms-id-7 .mission_banner img{
+  object-fit: cover;
+  height: 100%;
+  object-position: center -29rem;
+}
+.cms-id-7 .mission_banner .banner-title{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.cms-id-7 .mission_banner .banner-title h1{
+  color: #fff;
+  font-size: 3.5rem;
+}
+
+.cms-id-7 .mission_content {
+  width: 100%;
+  background: #121212;
+}
+.deferred-media__poster-button{
+  position: absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:40px;width: 5rem;
+                height: 5rem;
+                background: #121212;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                transition: all 0.25s;
+}
+
+.deferred-media__poster-button:hover{
+  transform: translate(-50%,-50%) scale(1.1) !important;
+  cursor: pointer;
+}
+.cms-id-7 .mission_statement{
+  text-align: center;
+  width: 1280px;
+  margin: auto;
+  padding: 4rem 0;
+}
+.cms-id-7 .mission_statement h1{
+  font-size: 3rem;
+  color: #fff;
+}
+.cms-id-7 .mission_statement p{
+  font-size: 1.25rem;
+  color: rgba(250,250,250,.75);
+}
+
+.cms-id-7 .mission_newsletter{
+  display: flex;
+  background: #121212;
+  justify-content: center;
+  padding: 2rem 0;
+}
+
+.cms-id-7 .mission_newsletter #blockEmailSubscription_displayHome{
+  background: #121212 !important;
+}
+
+.cms-id-7 .mission_newsletter #blockEmailSubscription_displayHome #block-newsletter-label{
+  font-size: 3rem !important;
+  width: fit-content;
+  margin-bottom: 2rem;
+}
+.cms-id-7 .mission_newsletter #blockEmailSubscription_displayHome #block-newsletter-secondlabel{
+  font-size: 1.25rem !important;
+  width: fit-content;
+  margin-bottom: 1rem;
+  color: rgba(250,250,250,.75);
+}
+.cms-id-7 .mission_newsletter #blockEmailSubscription_displayHome .row {
+  align-items: center;
+}
+.cms-id-7 .featured_merch .featured-products {
+  background: #121212;
+  padding: 4rem 0;
+}
+.cms-id-7 .featured_merch .featured-products h1{
+  margin: 0 !important;
+  padding: 2rem 0;
+}
