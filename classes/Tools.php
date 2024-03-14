@@ -4242,12 +4242,10 @@ exit;
          union
                  (SELECT * from `'._DB_PREFIX_.'image`
         WHERE id_product="'.$product_id.'" and cover IS NULL      ORDER BY `position` LIMIT 0,1 )
-
-        LIMIT 0,2
         ';
         $result = Db::getInstance()->ExecuteS($sql);
         return $result;
-        
+
     }
 
 }
