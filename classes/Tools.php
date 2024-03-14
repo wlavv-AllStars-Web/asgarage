@@ -4247,6 +4247,7 @@ exit;
         ';
         $result = Db::getInstance()->ExecuteS($sql);
         return $result;
+        
     }
 
 }
