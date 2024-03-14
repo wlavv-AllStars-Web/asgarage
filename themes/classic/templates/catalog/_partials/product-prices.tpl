@@ -41,9 +41,9 @@
           <span class='current-price-value' content="{$product.rounded_display_price}">
             {capture name='custom_price'}{hook h='displayProductPriceBlock' product=$product type='custom_price' hook_origin='product_sheet'}{/capture}
             {if '' !== $smarty.capture.custom_price}
-              {$smarty.capture.custom_price nofilter}
+              {$smarty.capture.custom_price nofilter} EUR
             {else}
-              {$product.price}
+              {$product.price} EUR
             {/if}
           </span>
 
@@ -66,19 +66,19 @@
       </div>
     {/block}
 
-    {block name='product_without_taxes'}
+    {* {block name='product_without_taxes'}
       {if $priceDisplay == 2}
         <p class="product-without-taxes">{l s='%price% tax excl.' d='Shop.Theme.Catalog' sprintf=['%price%' => $product.price_tax_exc]}</p>
       {/if}
-    {/block}
+    {/block} *}
 
-    {block name='product_pack_price'}
+    {* {block name='product_pack_price'}
       {if $displayPackPrice}
         <p class="product-pack-price"><span>{l s='Instead of %price%' d='Shop.Theme.Catalog' sprintf=['%price%' => $noPackPrice]}</span></p>
       {/if}
-    {/block}
+    {/block} *}
 
-    {block name='product_ecotax'}
+    {* {block name='product_ecotax'}
         {if !$product.is_virtual && $product.ecotax.amount > 0}
         <p class="price-ecotax">{l s='Including %amount% for ecotax' d='Shop.Theme.Catalog' sprintf=['%amount%' => $product.ecotax.value]}
           {if $product.has_discount}
@@ -86,11 +86,11 @@
           {/if}
         </p>
       {/if}
-    {/block}
+    {/block} *}
 
     {hook h='displayProductPriceBlock' product=$product type="weight" hook_origin='product_sheet'}
 
-    <div class="tax-shipping-delivery-label">
+    {* <div class="tax-shipping-delivery-label">
       {if !$configuration.taxes_enabled}
         {l s='No tax' d='Shop.Theme.Catalog'}
       {elseif $configuration.display_taxes_label}
@@ -106,12 +106,12 @@
         {elseif $product.additional_delivery_times == 2}
           {if $product.quantity >= $product.quantity_wanted}
             <span class="delivery-information">{$product.delivery_in_stock}</span>
-          {* Out of stock message should not be displayed if customer can't order the product. *}
+
           {elseif $product.add_to_cart_url}
             <span class="delivery-information">{$product.delivery_out_stock}</span>
           {/if}
         {/if}
       {/if}
-    </div>
+    </div> *}
   </div>
 {/if}

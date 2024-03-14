@@ -70,7 +70,7 @@
           </section>
         {/block}
         </div>
-        <div class="col-md-6">
+        <div class="col-md-4 product-right">
           {block name='page_header_container'}
             {block name='page_header'}
               <h1 class="h1">{block name='page_title'}{$product.name}{/block}</h1>
@@ -79,6 +79,8 @@
           {block name='product_prices'}
             {include file='catalog/_partials/product-prices.tpl'}
           {/block}
+
+          <p><a style="text-decoration: underline;">Shipping</a> calculated at checkout.</p>
 
           <div class="product-information">
             {block name='product_description_short'}
@@ -238,6 +240,7 @@
           </div>
         </section>
       {/if}
+      aqui
     {/block}
 
     {block name='product_footer'}
