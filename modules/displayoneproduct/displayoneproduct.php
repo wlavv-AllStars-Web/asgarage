@@ -24,15 +24,13 @@ class DisplayOneProduct extends Module
     public function install()
     {
         return parent::install() &&
-            $this->registerHook('displayHome') &&
-            $this->registerHook('moduleRoutes');
+            $this->registerHook('displayHome');
     }
 
     public function uninstall()
     {
         return parent::uninstall() &&
-        $this->registerHook('displayHome') &&
-        $this->registerHook('moduleRoutes');
+        $this->registerHook('displayHome');
     }
 
     public function hookDisplayHome($params)
