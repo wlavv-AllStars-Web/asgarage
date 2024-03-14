@@ -32,7 +32,7 @@
   </p>
   {include file="catalog/_partials/productlist.tpl" products=$products cssClass="row" productClass="col-xs-12 col-sm-6 col-lg-4 col-xl-3"}
   <div class="container-all-product-link">
-    <a class="all-product-link float-xs-left float-md-right h4" href="{$allProductsLink}">
+    <a class="all-product-link float-xs-left float-md-right h4" href="{$link->getCategoryLink(2)|escape:'html':'UTF-8'}">
       {l s='VIEW ALL' d='Shop.Theme.Catalog'}<i class="material-icons">&#xE315;</i>
     </a>
   </div>

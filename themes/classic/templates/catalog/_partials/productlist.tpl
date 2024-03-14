@@ -24,15 +24,17 @@
  *}
 
 {capture assign="productClasses"}{if !empty($productClass)}{$productClass}{else}col-xs-12 col-sm-6 col-xl-4{/if}{/capture}
-
+{assign var="currentUrl" value="http://"|cat:$smarty.server.HTTP_HOST|cat:$smarty.server.REQUEST_URI}
 <div class="products{if !empty($cssClass)} {$cssClass}{/if}">
     {if $currentUrl == $link->getCategoryLink(2)}
         <div class="clothes" style="width: 1440px;margin:auto;">
+        
         {foreach from=$products item="product" key="position"}
             {* <pre>{$product|print_r}</pre> *}
             {if $product.category == "featured"}
                 
                     {include file="catalog/_partials/miniatures/product.tpl" product=$product position=$position productClasses=$productClasses}
+                    
                 
             {/if}
         {/foreach}
@@ -57,11 +59,13 @@
         {if $product.category == "stickers"}
             <div class="stickers" style="width: 1440px;margin:auto;">
             <h1 style="color: #fff;font-size: 3rem;text-align: start;padding: 2rem 0 1rem 4rem;">Stickers</h1>
+            
             {foreach from=$products item="product" key="position"}
                 {* <pre>{$product|print_r}</pre> *}
                 {if $product.category == "stickers"}
                     
                         {include file="catalog/_partials/miniatures/product.tpl" product=$product position=$position productClasses=$productClasses}
+                        
                     
                 {/if}
             {/foreach}
@@ -108,7 +112,16 @@
             <div class="img" style="flex: 1;">
             <img src="//thehamiltoncollection.com/cdn/shop/files/imgonline-com-ua-compressed-YAu05Op0JFzZ.jpg?v=1666732715&width=1500" style="width: 100%;object-fit:cover;height:100%;object-position:center;"/></div>
         </div>
+    {elseif $currentUrl == "http://"|cat:$smarty.server.HTTP_HOST|cat:"/"}
+        {assign var="productCountIndex" value=0}
+        {foreach from=$products item="product" key="position"}
+            {if $productCountIndex < 4}
+                {include file="catalog/_partials/miniatures/product.tpl" product=$product position=$position productClasses=$productClasses}
+                {assign var="productCountIndex" value=$productCountIndex+1}
+            {/if}
+        {/foreach}
     {else}
+        
         {foreach from=$products item="product" key="position"}
             {include file="catalog/_partials/miniatures/product.tpl" product=$product position=$position productClasses=$productClasses}
         {/foreach}
