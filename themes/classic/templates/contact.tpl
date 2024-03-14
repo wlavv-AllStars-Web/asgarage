@@ -41,5 +41,16 @@
 {/if}
 
 {block name='page_content'}
+  <div class="banner_contact" style="position: relative;">
+    <img src="//thehamiltoncollection.com/cdn/shop/files/Screen_Shot_2022-09-29_at_3.01.06_PM.png?v=1664481680&width=1500" style="width: 100%;max-height:600px;object-fit:cover;"/>
+    <h1 style="position:absolute;width:100%;height:100%;top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    color: #fff;
+    background: rgba(0,0,0,0.5);">Contact Us</h1>
+  </div>
   {hook h='displayContactContent'}
 {/block}

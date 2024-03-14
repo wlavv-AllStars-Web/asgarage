@@ -22,8 +22,8 @@
  * @copyright Since 2007 PrestaShop SA and Contributors
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  *}
-<section class="contact-form">
-  <form action="{$urls.pages.contact}" method="post" {if $contact.allow_file_upload}enctype="multipart/form-data"{/if}>
+<section class="contact-form" style="display: flex;justify-content:center;">
+  <form class="col-md-6" action="{$urls.pages.contact}" method="post" {if $contact.allow_file_upload}enctype="multipart/form-data"{/if}>
     {if $notifications}
       <div class="col-xs-12 alert {if $notifications.nw_error}alert-danger{else}alert-success{/if}">
         <ul>
@@ -38,13 +38,13 @@
       <section class="form-fields">
 
         <div class="form-group row">
-          <div class="col-md-9 col-md-offset-3">
-            <h3>{l s='Contact us' d='Shop.Theme.Global'}</h3>
+          <div class="col-md-12 col-md-offset-3">
+            <h3 style="font-size: 2rem;color:#fff;padding:3rem 0 2rem 0;">{l s='Want to get in touch? Use the form below to drop us an email and we`ll get back to you!' d='Shop.Theme.Global'}</h3>
           </div>
         </div>
 
-        <div class="form-group row">
-          <label class="col-md-3 form-control-label" for="id_contact">{l s='Subject' d='Shop.Forms.Labels'}</label>
+        <div class="form-group row" style="display: none;">
+          {* <label class="col-md-3 form-control-label" for="id_contact">{l s='Subject' d='Shop.Forms.Labels'}</label> *}          
           <div class="col-md-6">
             <select name="id_contact" id="id_contact" class="form-control form-control-select">
               {foreach from=$contact.contacts item=contact_elt}
@@ -55,7 +55,17 @@
         </div>
 
         <div class="form-group row">
-          <label class="col-md-3 form-control-label" for="email">{l s='Email address' d='Shop.Forms.Labels'}</label>
+          {* <label class="col-md-3 form-control-label" for="email">{l s='Email address' d='Shop.Forms.Labels'}</label> *}
+          <div class="col-md-6">
+            <input
+              id="name"
+              class="form-control"
+              name="from"
+              type="text"
+              value="{$contact.name}"
+              placeholder="{l s='Name' d='Shop.Forms.Help'}"
+            >
+          </div>
           <div class="col-md-6">
             <input
               id="email"
@@ -63,14 +73,26 @@
               name="from"
               type="email"
               value="{$contact.email}"
-              placeholder="{l s='your@email.com' d='Shop.Forms.Help'}"
+              placeholder="{l s='Email *' d='Shop.Forms.Help'}"
             >
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="col-md-12">
+          <input
+          id="phone"
+          class="form-control"
+          name="from"
+          type="number"
+          value="{$contact.number}"
+          placeholder="{l s='Phone Number' d='Shop.Forms.Help'}"
+        >
           </div>
         </div>
 
         {if $contact.orders}
           <div class="form-group row">
-            <label class="col-md-3 form-control-label" for="id-order">{l s='Order reference' d='Shop.Forms.Labels'}</label>
+            {* <label class="col-md-3 form-control-label" for="id-order">{l s='Order reference' d='Shop.Forms.Labels'}</label> *}
             <div class="col-md-6">
               <select id="id-order" name="id_order" class="form-control form-control-select">
                 <option value="">{l s='Select reference' d='Shop.Forms.Help'}</option>
@@ -85,21 +107,21 @@
           </div>
         {/if}
 
-        {if $contact.allow_file_upload}
-          <div class="form-group row">
-            <label class="col-md-3 form-control-label" for="file-upload">{l s='Attachment' d='Shop.Forms.Labels'}</label>
-            <div class="col-md-6">
+        {* {if $contact.allow_file_upload}
+          <div class="form-group row"> *}
+            {* <label class="col-md-3 form-control-label" for="file-upload">{l s='Attachment' d='Shop.Forms.Labels'}</label> *}
+            {* <div class="col-md-6">
               <input id="file-upload" type="file" name="fileUpload" class="filestyle" data-buttonText="{l s='Choose file' d='Shop.Theme.Actions'}">
-            </div>
-            <span class="col-md-3 form-control-comment">
+            </div> *}
+            {* <span class="col-md-3 form-control-comment">
               {l s='optional' d='Shop.Forms.Help'}
-            </span>
-          </div>
-        {/if}
+            </span> *}
+          {* </div>
+        {/if} *}
 
         <div class="form-group row">
-          <label class="col-md-3 form-control-label" for="contactform-message">{l s='Message' d='Shop.Forms.Labels'}</label>
-          <div class="col-md-9">
+          {* <label class="col-md-3 form-control-label" for="contactform-message">{l s='Message' d='Shop.Forms.Labels'}</label> *}
+          <div class="col-md-12">
             <textarea
               id="contactform-message"
               class="form-control"

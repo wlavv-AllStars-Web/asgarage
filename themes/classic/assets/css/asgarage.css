@@ -699,6 +699,11 @@ a{
   color: #fff;
   font-size: 3.5rem;
 }
+.cms-id-7 .mission_banner .banner-title p{
+  color:rgba(250,250,250,.75);
+  font-size: 1.40rem;
+  width: 40%;
+}
 
 .cms-id-7 .mission_content {
   width: 100%;
@@ -766,4 +771,52 @@ a{
 .cms-id-7 .featured_merch .featured-products h1{
   margin: 0 !important;
   padding: 2rem 0;
+}
+
+/* page contact */
+
+#contact .breadcrumb {
+  display: none !important;
+}
+
+#contact .header-nav {
+  background:linear-gradient(310deg, rgba(56, 78, 197, 1) 23%, rgba(255, 58, 129, 0.8) 52%, rgba(255, 201, 104, 1) 95%);
+}
+
+#contact #wrapper {
+  padding: 0 !important;
+}
+#contact #content-wrapper {
+  padding: 0 !important;
+  background: #121212;
+}
+#contact #content-wrapper .page-content {
+  margin-bottom: 0 !important;
+  padding: 0;
+  background: transparent;
+}
+#contact #content-wrapper .page-content .contact-form {
+  background: transparent;
+}
+#contact .contact-form .form-control {
+  background: #121212;
+  color: rgba(250,250,250,.8);
+  border: 1px solid rgba(250,250,250,.8);
+  padding: 1rem 1rem;
+}
+
+#contact .form-control:focus {
+  outline: .1875rem solid rgba(250,250,250,.8);
+}
+
+#contact .form-footer {
+  text-align: start !important;
+}
+
+#contact .contact-form .btn {
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+  color: #121212;
+  font-weight: 500;
+  background: #7bebff;
 }

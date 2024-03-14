@@ -70,7 +70,7 @@
             {/if}
         {/foreach}
         </div>
-        
+
         <div class="more-imgs" style="display: flex;height:700px;width:100%;">
             <div class="img" style="flex: 1;">
                 <img src="//thehamiltoncollection.com/cdn/shop/files/imgonline-com-ua-compressed-Fg9EfWXPx5rBP6Q.jpg?v=1666732714&width=1500"  style="width: 100%;object-fit:cover;height:100%;object-position:center;"/>
@@ -120,8 +120,7 @@
                 {assign var="productCountIndex" value=$productCountIndex+1}
             {/if}
         {/foreach}
-    {else}
-        
+    {else} 
         {foreach from=$products item="product" key="position"}
             {include file="catalog/_partials/miniatures/product.tpl" product=$product position=$position productClasses=$productClasses}
         {/foreach}
