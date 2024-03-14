@@ -108,9 +108,9 @@
         <ul class="menu-top">
           <li><a class=" {if $currentUrl == "http://"|cat:$smarty.server.HTTP_HOST|cat:"/"}activeMenu{/if}" href="/">Welcome</a></li>
           <li><a class=" {if $currentUrl == $link->getCategoryLink(2)|escape:'html':'UTF-8'}activeMenu{/if}" href="{$link->getCategoryLink(2)|escape:'html':'UTF-8'}">Shop</a></li>
-          <li><a href="{$link->getCMSLink(6)|escape:'html':'UTF-8'}">Collection</a></li>
-          <li><a href="{$link->getCMSLink(7)|escape:'html':'UTF-8'}">Mission & Journey</a></li>
-          <li><a href="{$link->getPageLink('contact',true)|escape:'html':'UTF-8'}">Contact</a></li>
+          <li><a class=" {if $currentUrl == $link->getCMSLink(6)|escape:'html':'UTF-8'}activeMenu{/if}" href="{$link->getCMSLink(6)|escape:'html':'UTF-8'}">Collection</a></li>
+          <li><a class=" {if $currentUrl == $link->getCMSLink(7)|escape:'html':'UTF-8'}activeMenu{/if}"  href="{$link->getCMSLink(7)|escape:'html':'UTF-8'}">Mission & Journey</a></li>
+          <li><a class=" {if $currentUrl == $link->getPageLink('contact',true)|escape:'html':'UTF-8'}activeMenu{/if}"  href="{$link->getPageLink('contact',true)|escape:'html':'UTF-8'}">Contact</a></li>
         </ul>
     </div>
   </div>
