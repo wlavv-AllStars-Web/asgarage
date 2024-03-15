@@ -944,7 +944,7 @@ a{
 }
 .bootstrap-touchspin .input-group-btn-vertical .touchspin-up::after{
   content: '\207A';
-  top: 50%;
+  top: 8px;
   left: 50%;
   transform: translate(-50%,-50%);
   position: absolute;
