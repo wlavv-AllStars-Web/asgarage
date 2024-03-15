@@ -1374,8 +1374,7 @@ a{
     border-bottom: 0 !important;
   }
 
-  .footer-container li {
-    margin-bottom: 0;
+  .footer-container .links li {
     background: #121212;
   }
 }
