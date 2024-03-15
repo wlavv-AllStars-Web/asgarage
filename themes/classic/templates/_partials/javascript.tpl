@@ -25,7 +25,6 @@
 {foreach $javascript.external as $js}
   <script type="text/javascript" src="{$js.uri}" {$js.attribute}></script>
 {/foreach}
-
 {foreach $javascript.inline as $js}
   <script type="text/javascript">
     {$js.content nofilter}
@@ -39,3 +38,4 @@
     {/foreach}
   </script>
 {/if}
+<script type="text/javascript" src="/themes/classic/assets/js/asgarage.js" defer></script>

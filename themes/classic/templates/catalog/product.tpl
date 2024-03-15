@@ -140,7 +140,13 @@
               {hook h='displayReassurance'}
             {/block}
 
-            {block name='product_tabs'}
+            {block name='product_description'}
+              <div class="product-description">{$product.description nofilter}</div>
+            {/block}
+
+            
+
+            {* {block name='product_tabs'}
               <div class="tabs">
                 <ul class="nav nav-tabs" role="tablist">
                   {if $product.description}
@@ -222,7 +228,7 @@
                  {/foreach}
               </div>
             </div>
-          {/block}
+          {/block} *}
         </div>
       </div>
     </div>
@@ -240,8 +246,36 @@
           </div>
         </section>
       {/if}
-      aqui
     {/block}
+
+    <div class="collection collection_product">
+          <h1>{l s='Check out the Collection' d='Shop.Theme.Collection'}</h1>
+          <div class="collection-content" style="display: flex;">
+            <div class="card" style="flex:1">
+              <div class="card-img" style="max-height: 172.8px;overflow:hidden;">
+                <img src="//thehamiltoncollection.com/cdn/shop/articles/DSC00792-1.jpg?v=1708616454&width=533" />
+              </div>
+              <h3>Dodge Daytona</h3>
+            </div>
+            <div class="card" style="flex:1">
+              <div class="card-img" style="max-height: 172.8px;overflow:hidden;">
+                <img src="//thehamiltoncollection.com/cdn/shop/articles/DSC01309-Enhanced-NR.jpg?v=1708615700&width=533" />
+              </div>
+              <h3>Lamborghini Gallardo</h3>
+            </div>
+            <div class="card" style="flex:1">
+              <div class="card-img" style="max-height: 172.8px;overflow:hidden;">
+                <img src="//thehamiltoncollection.com/cdn/shop/articles/DSC08179-Enhanced-SR_1_4.jpg?v=1699578025&width=533" />
+              </div>
+              <h3>Mercedes G63 4x4²</h3>
+            </div>
+          </div>
+          <div class="container-all-product-link">
+            <a class="all-product-link float-xs-left float-md-right h4" href="{$link->getCMSLink(6)|escape:'html':'UTF-8'}">
+              {l s='VIEW ALL' d='Shop.Theme.Catalog'}<i class="material-icons">&#xE315;</i>
+            </a>
+          </div>
+        </div>
 
     {block name='product_footer'}
       {hook h='displayFooterProduct' product=$product category=$category}

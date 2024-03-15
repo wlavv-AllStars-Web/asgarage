@@ -840,6 +840,11 @@ a{
   margin: 0 2rem 0 auto;
 }
 
+#product .product-container {
+  width: 1440px;
+  margin: auto;
+}
+
 .product-cover .layer:hover {
   opacity: 0.2;
 }
@@ -916,4 +921,109 @@ a{
 #product .product-variants .input-radio[checked="checked"] + .radio-label {
   background: #fff !important;
   color: #121212;
+}
+
+#product .product-add-to-cart .input-group-btn-vertical {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  border: 1px solid #fff;
+}
+
+#product .product-add-to-cart .input-group-btn-vertical .btn-touchspin{
+  background: transparent !important;
+  border: 0 !important;
+  color: #fff;
+  padding: 0 1.5rem;
+}
+#product .product-add-to-cart .input-group-btn-vertical .btn-touchspin i {
+  top: 50%;
+  left: 50%;
+  font-size: 1rem;
+  transform: translate(-50%,-50%);
+}
+.bootstrap-touchspin .input-group-btn-vertical .touchspin-up::after{
+  content: '\207A';
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  position: absolute;
+  height: 22px;
+  font-size: 2rem;
+}
+.bootstrap-touchspin .input-group-btn-vertical .touchspin-down::after{
+  content: '\002D';
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  position: absolute;
+  height: 45px;
+  font-size: 2rem;
+}
+#product .product-add-to-cart .input-group-btn-vertical #quantity_wanted{
+  background: transparent !important;
+  border: 0 !important;
+  color: #fff;
+  text-align: center;
+}
+#product .product-actions .control-label {
+  color: rgba(250, 250, 250, 0.9);
+}
+
+#product .product-add-to-cart .bootstrap-touchspin{
+  padding-bottom: 2rem;
+}
+
+#product .product-information .product-description p{
+  color: rgba(250, 250, 250, 0.9) !important;
+}
+
+#product .product-accessories {
+  width: 1440px;
+  margin: auto;
+  padding: 4rem 0;
+}
+
+#product .product-accessories .h5 {
+  font-size: 2rem;
+  color: rgba(250, 250, 250, 0.9);
+  padding-bottom: 1rem;
+}
+
+#product .product-accessories .product-miniature {
+  justify-content: start !important;
+}
+
+#product .product-accessories .product-miniature .thumbnail-container {
+  background: transparent;
+}
+#product .product-accessories .product-miniature .thumbnail-top {
+  border-radius: 18px;
+}
+#product .product-accessories .product-miniature .product-description {
+  background: transparent;
+  text-align: start;
+}
+#product .product-accessories .product-miniature .product-description .product-title{
+  text-align: start;
+}
+#product .product-accessories .product-miniature .product-description .product-price-and-shipping{
+  text-align: start;
+  font-size: 1.15rem;
+ color: rgba(250, 250, 250, 0.9);
+}
+#product .product-accessories .product-miniature .product-description .product-title a{
+ font-size: 1.25rem;
+ color: rgba(250, 250, 250, 0.9);
+}
+
+#product .collection_product {
+  max-width: 1440px;
+  margin: auto;
+}
+#product .collection_product h1{
+  font-size: 2rem;
+}
+#product .collection_product .collection-content .card-img{
+  max-height: 278px !important;
 }
