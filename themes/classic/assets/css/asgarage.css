@@ -937,19 +937,19 @@ a{
   padding: 0 1.5rem;
 }
 #product .product-add-to-cart .input-group-btn-vertical .btn-touchspin i {
-  top: 50%;
-  left: 50%;
-  font-size: 1rem;
-  transform: translate(-50%,-50%);
+  top: 50%  !important;
+  left: 50%  !important;
+  font-size: 1rem  !important;
+  transform: translate(-50%,-50%)  !important;
 }
 .bootstrap-touchspin .input-group-btn-vertical .touchspin-up::after{
   content: '\207A';
-  top: 8px;
-  left: 50%;
-  transform: translate(-50%,-50%);
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%,-50%) !important;
   position: absolute;
-  height: 22px;
-  font-size: 2rem;
+  height: 22px !important;
+  font-size: 2rem !important;
 }
 .bootstrap-touchspin .input-group-btn-vertical .touchspin-down::after{
   content: '\002D';
