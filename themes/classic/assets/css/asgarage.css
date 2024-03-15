@@ -1231,3 +1231,125 @@ a{
 .ui-autocomplete.searchbar-autocomplete li a:hover{
   background-color: #1c1c1c;
 }
+
+#search_widget .search {
+  display: none;
+}
+
+/* mobile */
+
+@media screen and (max-width:560px) {
+  .search_container{
+    position: relative;
+  }
+  #search_widget {
+    position: absolute;
+    top: -16px;
+    z-index: 9999999;
+    right: -15px;
+    width: 100vw !important;
+    background: #121212;
+  }
+  #search_widget form{
+    display: flex;
+    justify-content: space-around;
+    padding: 0 1rem;
+    width: 100%;
+  }
+  #search_widget form input{
+    width: 80%;
+  }
+  #search_widget form i.clear {
+    display: flex !important;
+    position: unset;
+    font-size: 1.85rem;
+    width: 10%;
+  }
+
+  #search_widget .search {
+    display: block;
+  }
+
+  #search_widget form div{
+    display: flex;
+  border: 1px solid white;
+  padding: 0 0.5rem;
+  width: 90%;
+  }
+  #search_widget form div input{
+    border: none !important;
+    width: 90%;
+  }
+  #search_widget form div i{
+    position: unset !important;
+    font-size: 1.85rem;
+  }
+
+  .header-top .search_container {
+    height: 50px;
+    display: flex;
+  }
+
+  .header-bottom-content h1{
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .header-top #_mobile_logo img {
+    width: 100%;
+    max-height: none;
+    object-fit: contain;
+  }
+  .header-top #_mobile_cart {
+    height: 68px;
+    display: flex;
+  }
+  .header-top #_mobile_cart .blockcart{
+    display: flex;
+  align-items: center;
+  }
+
+  .header-top #menu-icon {
+    height: 68px;
+    display: flex;
+    align-items: center;
+  }
+  .header-top #menu-icon i{
+    color: white;
+    font-size: 2rem;
+  }
+
+  .search_container #search_widget.search_active {
+    display: flex;
+    height: 100px;
+    align-items: center;
+  }
+
+  .header-nav .animate-arrow {
+    font-size: 1rem;
+  }
+
+  .mission-journey {
+    flex-direction: column;
+    gap: 1rem;
+    max-height: none;
+  }
+
+  .mission-journey .mission-journey-content {
+    padding: 1rem 0.5rem;
+  }
+
+  .collection-content {
+    width: 100%;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+  }
+
+  .collection-content .card {
+    min-width: 80vw;
+  /* max-height: 200px; */
+  overflow: unset;
+  min-width: 80vw;
+  }
+
+}

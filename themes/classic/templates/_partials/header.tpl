@@ -32,7 +32,7 @@
   <nav class="header-nav">
     <div class="container-fluid">
       <div class="row">
-        <div class="hidden-sm-down">
+        <div class="">
           {* <div class="col-md-5 col-xs-12">
             {hook h='displayNav1'}
           </div>
@@ -48,7 +48,7 @@
             </a>
           </div>
         </div>
-        <div class="hidden-md-up text-sm-center mobile">
+        {* <div class="hidden-md-up text-sm-center mobile">
           <div class="float-xs-left" id="menu-icon">
             <i class="material-icons d-inline">&#xE5D2;</i>
           </div>
@@ -56,7 +56,7 @@
           <div class="float-xs-right" id="_mobile_user_info"></div>
           <div class="top-logo" id="_mobile_logo"></div>
           <div class="clearfix"></div>
-        </div>
+        </div> *}
       </div>
     </div>
   </nav>
@@ -77,6 +77,16 @@
             {/if}
           {/if}
         </div> *}
+        <div class="hidden-md-up text-sm-center mobile col-xs-12">
+          <div class="float-xs-left" id="menu-icon">
+            <i class="material-icons d-inline">&#xE5D2;</i>
+          </div>
+          <div class="float-xs-right" id="_mobile_cart"></div>
+          <div class="float-xs-right" id="_mobile_user_info"></div>
+          <a href="/"><div class="top-logo" id="_mobile_logo"></div></a>
+          <div class="clearfix"></div>
+        </div>
+
         <div class="col-md-5">
           <div class="search_container">
             <i class="fa-solid fa-magnifying-glass"  style="color: #fff;font-size: 1.5rem;"></i>
@@ -86,10 +96,10 @@
             {hook h='displayTop'}
           </div>
         </div>
-        <div class="col-md-2" id="_desktop_logo" style="display: flex;justify-content:center;">
+        <div class="col-md-2  hidden-md-down" id="_desktop_logo" style="display: flex;justify-content:center;">
           <img src="//thehamiltoncollection.com/cdn/shop/files/New_logo.png?v=1670879737" width="100" height="68">
         </div>
-        <div class="col-md-5" style="display: flex;justify-content:end;">
+        <div class="col-md-5  hidden-md-down" style="display: flex;justify-content:end;">
           {hook h='displayNav2' mod='ps_shoppingcart' id_module=9}
         </div>
         {* <div class="header-top-right col-md-10 col-sm-12 position-static">
@@ -107,7 +117,7 @@
     </div>
     {assign var="currentUrl" value="http://"|cat:$smarty.server.HTTP_HOST|cat:$smarty.server.REQUEST_URI}
 
-    <div class="container">
+    <div class="container hidden-md-down">
         <ul class="menu-top">
           <li><a class=" {if $currentUrl == "http://"|cat:$smarty.server.HTTP_HOST|cat:"/"}activeMenu{/if}" href="/">Welcome</a></li>
           <li><a class=" {if $currentUrl == $link->getCategoryLink(2)|escape:'html':'UTF-8'}activeMenu{/if}" href="{$link->getCategoryLink(2)|escape:'html':'UTF-8'}">Shop</a></li>
