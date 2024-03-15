@@ -1352,4 +1352,7 @@ a{
   min-width: 80vw;
   }
 
+  .footer_container .links .row {
+    flex-direction: column;
+  }
 }
