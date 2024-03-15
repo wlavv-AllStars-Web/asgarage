@@ -78,9 +78,12 @@
           {/if}
         </div> *}
         <div class="col-md-5">
-          <i class="fa-solid fa-magnifying-glass"  style="color: #fff;font-size: 1.5rem;"></i>
+          <div class="search_container">
+            <i class="fa-solid fa-magnifying-glass"  style="color: #fff;font-size: 1.5rem;"></i>
+            {hook h='displaySearch' mod='ps_searchbar' id_module=11}
+          </div>
           <div style="display: none;">
-          {hook h='displayTop'}
+            {hook h='displayTop'}
           </div>
         </div>
         <div class="col-md-2" id="_desktop_logo" style="display: flex;justify-content:center;">
@@ -132,3 +135,14 @@
   {hook h='displayNavFullWidth'}
 {/block}
 
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const iconSearch = document.querySelector(".search_container .fa-magnifying-glass")
+    const searchInput = document.querySelector(".search_container #search_widget")
+
+    iconSearch.addEventListener("click", () => {
+      searchInput.classList.toggle("search_active")
+    })
+
+  });
+</script>

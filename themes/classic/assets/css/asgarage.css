@@ -1192,3 +1192,42 @@ a{
 #cart .checkout.cart-detailed-actions .btn:hover{
   outline: 1px solid #7bebff;
 }
+
+.search_container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.search_container i {
+  cursor: pointer;
+}
+
+.search_container #search_widget {
+  display: none;
+  transition: all 1s;
+  width: 0%;
+}
+.search_container #search_widget.search_active {
+  display: block;
+  width: 100%;
+}
+
+.search_container #search_widget form input{
+  padding: 10px;
+  font-size: 1.2rem;
+  background: #121212;
+  border: 1px solid rgba(250, 250, 250, 0.9);
+}
+.search_container #search_widget form input::placeholder{
+  color: rgba(250, 250, 250, 0.9);
+}
+
+.ui-autocomplete.searchbar-autocomplete li a{
+  color: rgba(250, 250, 250, 0.9);
+  background-color: #121212;
+  font-size: 1rem;
+}
+.ui-autocomplete.searchbar-autocomplete li a:hover{
+  background-color: #1c1c1c;
+}
