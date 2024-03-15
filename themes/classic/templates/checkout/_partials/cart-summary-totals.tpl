@@ -41,7 +41,13 @@
       </div>
     {/if}
   {/block}
-
+  <div>
+    <p>
+    {l s='Taxes and' d='Shop.Theme.Actions'}
+    <a> {l s='shipping' d='Shop.Theme.Actions'} </a>
+    {l s='calculated at checkout' d='Shop.Theme.Actions'}
+    </p>
+  </div>
   {block name='cart_summary_tax'}
     {if $cart.subtotals.tax}
       <div class="cart-summary-line">

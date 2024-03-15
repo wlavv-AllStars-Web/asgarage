@@ -27,34 +27,38 @@
 {block name='content'}
 
   <section id="main">
+  <div class="linecart"></div>
     <div class="cart-grid row">
-
+    {* {block name='continue_shopping'}
+      <a class="label" href="{$urls.pages.index}">
+        <i class="material-icons">chevron_left</i>{l s='Continue shopping' d='Shop.Theme.Actions'}
+      </a>
+    {/block} *}
       <!-- Left Block: cart product informations & shipping -->
-      <div class="cart-grid-body col-lg-8">
+      <div class="cart-grid-body col-lg-12">
 
         <!-- cart products detailed -->
         <div class="card cart-container">
           <div class="card-block">
             <h1 class="h1">{l s='Shopping Cart' d='Shop.Theme.Checkout'}</h1>
+            <a class="label" href="{$link->getCategoryLink(2)|escape:'html':'UTF-8'}">
+            {l s='Continue shopping' d='Shop.Theme.Actions'}
+              {* <i class="material-icons">chevron_left</i>{l s='Continue shopping' d='Shop.Theme.Actions'} *}
+            </a>
           </div>
-          <hr class="separator">
+
           {block name='cart_overview'}
             {include file='checkout/_partials/cart-detailed.tpl' cart=$cart}
           {/block}
         </div>
 
-        {block name='continue_shopping'}
-          <a class="label" href="{$urls.pages.index}">
-            <i class="material-icons">chevron_left</i>{l s='Continue shopping' d='Shop.Theme.Actions'}
-          </a>
-        {/block}
 
         <!-- shipping informations -->
         {block name='hook_shopping_cart_footer'}
           {hook h='displayShoppingCartFooter'}
         {/block}
       </div>
-
+        
       <!-- Right Block: cart subtotal & cart total -->
       <div class="cart-grid-right col-lg-4">
 
@@ -76,9 +80,9 @@
           </div>
         {/block}
 
-        {block name='hook_reassurance'}
+        {* {block name='hook_reassurance'}
           {hook h='displayReassurance'}
-        {/block}
+        {/block} *}
 
       </div>
 

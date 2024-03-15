@@ -1027,3 +1027,151 @@ a{
 #product .collection_product .collection-content .card-img{
   max-height: 278px !important;
 }
+
+
+/* cart */
+
+#cart .header-nav {
+  background:linear-gradient(310deg, rgba(56, 78, 197, 1) 23%, rgba(255, 58, 129, 0.8) 52%, rgba(255, 201, 104, 1) 95%);
+}
+
+#cart #wrapper {
+  background: #121212;
+}
+
+#cart #wrapper {
+  padding: 0 !important;
+}
+#cart #content-wrapper {
+  padding: 0 !important;
+  background: #121212;
+}
+#cart #content-wrapper .cart-grid {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 1440px;
+  margin: auto;
+  align-items: end;
+}
+
+#cart .linecart {
+  background:linear-gradient(310deg, rgba(56, 78, 197, 1) 23%, rgba(255, 58, 129, 0.8) 52%, rgba(255, 201, 104, 1) 95%);
+  height: 50px;
+  width: 100%;
+}
+
+#cart .cart-container {
+  background: transparent !important;
+}
+#cart .cart-container .product-line-grid {
+  display: flex;
+  align-items: center;
+}
+#cart .cart-container .product-line-grid img{
+  border-radius: 18px;
+}
+
+#cart .cart-container .product-line-grid .product-line-info a{
+   color: rgba(250, 250, 250, 0.9) !important;
+}
+#cart .cart-container .product-line-grid .product-line-info .price{
+   color: rgba(250, 250, 250, 0.9) !important;
+}
+#cart .cart-container .product-line-grid .product-line-actions .product-price{
+   color: rgba(250, 250, 250, 0.9) !important;
+   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+#cart .cart-container .product-line-grid .remove-from-cart{
+   color: rgba(250, 250, 250, 0.9) !important;
+}
+#cart .bootstrap-touchspin{
+  display: flex;
+  align-items: center;
+  border: 1px solid rgba(250, 250, 250, 0.9);
+}
+#cart .bootstrap-touchspin input.form-control {
+  color: rgba(250, 250, 250, 0.9) !important;
+  background: #121212 !important;
+  text-align: center;
+  border: 0;
+}
+
+#cart .bootstrap-touchspin .input-group-btn-vertical{
+  display: flex;
+  align-items: center;
+}
+#cart .bootstrap-touchspin .input-group-btn-vertical .btn-touchspin{
+  border-color: #121212;
+  padding: 0.5rem 1rem;
+}
+#cart .bootstrap-touchspin .input-group-btn-vertical .bootstrap-touchspin-up{
+  background: #121212 !important;
+  color: rgba(250, 250, 250, 0.9) !important;
+}
+#cart .bootstrap-touchspin .input-group-btn-vertical .bootstrap-touchspin-down{
+  margin-top: 0 !important;
+  background: #121212 !important;
+  color: rgba(250, 250, 250, 0.9) !important;
+}
+
+#cart .cart-container .card-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 3rem;
+}
+#cart .cart-container .card-block h1 {
+  color: rgba(250, 250, 250, 0.9);
+  font-size: 3rem;
+  width: 80%;
+}
+#cart .cart-container .card-block a {
+  color: rgba(250, 250, 250, 0.9);
+  font-size: 1.5rem;
+  text-decoration: underline;
+}
+#cart .cart-container .card-block a:hover {
+  color: rgba(250, 250, 250, 0.9);
+  font-size: 1.5rem;
+  text-decoration: 2px underline;
+}
+
+#cart .cart-summary {
+  background: transparent;
+}
+#cart .cart-summary .cart-summary-line.cart-total .label{
+  color: rgba(250, 250, 250, 0.9);
+  font-size: 1.5rem;
+}
+#cart .cart-summary .cart-summary-line.cart-total .value{
+  color: rgba(250, 250, 250, 0.7);
+  font-size: 1.5rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#cart .cart-summary-totals p {
+  font-size: 1.1rem;
+  color: rgba(250, 250, 250, 0.7);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#cart .cart-summary-totals p a{
+  text-decoration: underline;
+}
+#cart .cart-summary-totals p a:hover{
+  text-decoration: 2px underline;
+  color: rgba(250, 250, 250, 0.9);
+}
+
+#cart .checkout.cart-detailed-actions .btn{
+  padding: 1.25rem 0;
+  border-radius: 3rem;
+  color: #121212;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background: #7bebff;
+}
+
+#cart .checkout.cart-detailed-actions .btn:hover{
+  outline: 1px solid #7bebff;
+}

@@ -25,7 +25,7 @@
 {block name='cart_detailed_totals'}
 <div class="cart-detailed-totals js-cart-detailed-totals">
 
-  <div class="card-block cart-detailed-subtotals js-cart-detailed-subtotals">
+  {* <div class="card-block cart-detailed-subtotals js-cart-detailed-subtotals">
     {foreach from=$cart.subtotals item="subtotal"}
       {if $subtotal && $subtotal.value|count_characters > 0 && $subtotal.type !== 'tax'}
         <div class="cart-summary-line" id="cart-subtotal-{$subtotal.type}">
@@ -45,7 +45,7 @@
         </div>
       {/if}
     {/foreach}
-  </div>
+  </div> *}
 
   {block name='cart_summary_totals'}
     {include file='checkout/_partials/cart-summary-totals.tpl' cart=$cart}
