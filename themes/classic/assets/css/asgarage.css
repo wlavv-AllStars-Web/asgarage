@@ -948,8 +948,13 @@ a{
   left: 50% !important;
   transform: translate(-50%,-50%) !important;
   position: absolute;
-  height: 22px !important;
+  /* height: 22px !important; */
   font-size: 2rem !important;
+}
+@supports (-moz-appearance:none) {
+  .bootstrap-touchspin .input-group-btn-vertical .touchspin-up::after {
+    height: 22px !important;
+  }
 }
 .bootstrap-touchspin .input-group-btn-vertical .touchspin-down::after{
   content: '\002D';
