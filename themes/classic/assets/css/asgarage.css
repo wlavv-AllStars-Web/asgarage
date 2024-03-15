@@ -1355,4 +1355,27 @@ a{
   .footer_container .links .row {
     flex-direction: column;
   }
+
+  .footer-container li{
+    margin-bottom: 0;
+  }
+
+  .footer-container .footer_after {
+    display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+  flex-direction: column;
+  width: 80%;
+  margin: auto;
+  gap: 1rem;
+  }
+
+  .block_newsletter {
+    border-bottom: 0 !important;
+  }
+
+  .footer-container li {
+    margin-bottom: 0;
+    background: #121212;
+  }
 }
