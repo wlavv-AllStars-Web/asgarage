@@ -1530,4 +1530,35 @@ a{
     height: unset !important;
     flex-direction: column;
   }
+
+  /* mission page mobile */
+
+  .mission_banner {
+    position: relative !important;
+    height: 100% !important;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .mission_banner img {
+    object-position: center !important;
+  }
+
+  .mission_banner .banner-title {
+    position: relative !important;
+    background: #191919 !important;
+  }
+
+  .videosContainer .video img {
+    width: 100%;
+    min-width: unset;
+  }
+
+  .cms-id-7 .mission_statement {
+    width: 100%;
+    padding: 4rem 1rem !important;
+  }
+  .cms-id-7 .mission_newsletter {
+    padding: 2rem !important;
+  }
 }
