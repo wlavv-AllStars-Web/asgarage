@@ -362,6 +362,10 @@ a{
   text-decoration: underline;
 }
 
+#index .collection .collection-content .card img {
+  min-height: 201px;
+}
+
 #category .block-category{
   display: none !important;
 }
@@ -1240,6 +1244,53 @@ a{
   display: none;
 }
 
+.cms-id-8 .breadcrumb {
+  display: none !important;
+}
+.cms-id-8 #wrapper {
+  padding-top: 0 !important;
+}
+.cms-id-8 #content-wrapper {
+  padding: 0 !important;
+}
+.cms-id-8 #content {
+  padding: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.cms-id-8 .collection_car_header {
+  max-width: 1440px;
+  margin: auto;
+}
+.cms-id-8 .collection_car_content {
+  max-width: 1200px;
+  margin:auto;
+}
+.cms-id-8 .collection_car {
+  background: #121212;
+}
+.cms-id-8 .collection_car_content h1{
+  color: rgba(250, 250, 250, 0.9);
+  font-size: 3rem;
+  padding-top: 2rem;
+}
+.cms-id-8 .collection_car_content p{
+  color: rgba(250, 250, 250, 0.9);
+  font-size: 1.5rem;
+  padding-bottom: 1rem;
+}
+
+.cms-id-8 .page-footer {
+  margin-bottom: 0 !important;
+}
+
+.cms-id-8 .content_img_container img{
+  width: 100%;
+}
+.cms-id-8 .collection_car_header img{
+  width: 100%;
+}
+
 /* mobile */
 
 @media screen and (max-width:560px) {
@@ -1660,4 +1711,6 @@ a{
   #product div.add button.btn.btn-primary.add-to-cart {
     width: 100%;
   }
+
+
 }

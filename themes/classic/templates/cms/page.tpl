@@ -51,7 +51,7 @@
               <h3>Dodge Daytona</h3>
             </div>
           </a>
-          <a>
+          <a href="{$link->getCMSLink(8)|escape:'html':'UTF-8'}">
             <div class="card">
               <div class="card-img" style="overflow:hidden;">
                 <img src="//thehamiltoncollection.com/cdn/shop/articles/DSC01309-Enhanced-NR.jpg?v=1708615700&width=533" />
@@ -127,6 +127,37 @@
         </div>
         <div class="featured_merch">
           {hook h='displayHome' mod='ps_featuredproducts' id_module=13}
+        </div>
+      {elseif $cms.id === 8}
+        <div class="collection_car">
+          <div class="collection_car_header">
+            <img src="https://thehamiltoncollection.com/cdn/shop/articles/DSC01309-Enhanced-NR.jpg?v=1708615700&width=1100" />
+          </div>
+          <div class="collection_car_content">
+            <h1>Lamborghini Gallardo</h1>
+            <p>2009 Lamborghini Gallardo</p>
+            <div class="content_img_container" >
+              <img src="https://cdn.shopify.com/s/files/1/0625/2013/1789/files/DSC01309-Enhanced-NR_2048x2048.jpg?v=1707434203" />
+            </div>
+            <div class="content_img_container">
+              <img src="https://cdn.shopify.com/s/files/1/0625/2013/1789/files/DSC01306_2048x2048.jpg?v=1708615239" />
+            </div>
+            <div class="content_img_container">
+              <img src="https://cdn.shopify.com/s/files/1/0625/2013/1789/files/DSC01274_2048x2048.jpg?v=1708615241"  />
+            </div>
+            <div class="content_img_container">
+              <img src="https://cdn.shopify.com/s/files/1/0625/2013/1789/files/DSC01282_2048x2048.jpg?v=1708615241" />
+            </div>
+            <div class="content_img_container">
+              <img src="https://cdn.shopify.com/s/files/1/0625/2013/1789/files/DSC01301_2048x2048.jpg?v=1708615240" />
+            </div>
+            <div class="content_img_container">
+              <img src="https://cdn.shopify.com/s/files/1/0625/2013/1789/files/DSC01274_2048x2048.jpg?v=1708615241"  />
+            </div>
+            <div class="goBackButton">
+            <a href="{$link->getCMSLink(7)|escape:'html':'UTF-8'}">Go back to collection</a>
+            </div>
+          </div>
         </div>
       {else}
       {$cms.content nofilter}
