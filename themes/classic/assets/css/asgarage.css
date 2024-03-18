@@ -1493,4 +1493,41 @@ a{
     background-position: center;
   }
 
+  /* shop page */
+
+  #wrapper .container-fluid {
+    width: 100%;
+  }
+
+  .sticker-banner .product-display {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .banner_content .add-to-cart {
+    width: 100% !important;
+  }
+
+  .banner_content .animate-arrow {
+    width: 100% !important;
+  }
+
+  .banner-product-add{
+    padding: 2rem 1rem !important;
+  }
+
+  .banner-product-add .banner-product-add-content {
+    flex-direction: column;
+  }
+  .banner-product-add .banner-product-add-content .banner_content{
+    padding: 1rem;
+  }
+  .banner-product-add .banner-product-add-content .banner_content h5{
+    padding: 1rem;
+  }
+
+  .more-imgs{
+    height: unset !important;
+    flex-direction: column;
+  }
 }
