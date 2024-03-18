@@ -105,7 +105,7 @@
             <button id="nextButton">></button>
           </div>
           <div class="container-all-product-link">
-            <a class="all-product-link float-xs-left float-md-right h4" href="">
+            <a class="all-product-link float-xs-left float-md-right h4" href="{$link->getCMSLink(6)|escape:'html':'UTF-8'}"">
               {l s='VIEW ALL' d='Shop.Theme.Catalog'}<i class="material-icons">&#xE315;</i>
             </a>
           </div>

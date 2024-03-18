@@ -1309,6 +1309,30 @@ a{
   outline: 3px solid rgba(250, 250, 250, 0.9);
 }
 
+.modal-header {
+  background-color: #191919 !important;
+}
+.modal-header i{
+  color: rgba(250, 250, 250, 0.9) !important;
+}
+.modal-header h4{
+  color: rgba(250, 250, 250, 0.9) !important;
+}
+
+.modal-body {
+  background-color: #191919 !important;
+  color: rgba(250, 250, 250, 0.9);
+}
+.modal-body h6,.modal-body p,.modal-body span {
+  color: rgba(250, 250, 250, 0.9) !important;
+}
+
+.modal-body .product-total span {
+  color: #191919 !important;
+}
+
+
+
 /* mobile */
 
 @media screen and (max-width:560px) {
