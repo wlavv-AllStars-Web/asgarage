@@ -61,7 +61,7 @@
     </div>
   </nav>
 {/block}
-
+{assign var="currentUrl" value="http://"|cat:$smarty.server.HTTP_HOST|cat:$smarty.server.REQUEST_URI}
 {block name='header_top'}
   <div class="header-top">
     <div class="container">
@@ -107,7 +107,18 @@
         </div> *}
       </div>
       <div id="mobile_top_menu_wrapper" class="row hidden-md-up" style="display:none;">
-        <div class="js-top-menu mobile" id="_mobile_top_menu"></div>
+        <div class="js-top-menu mobile" >
+          <ul id="top-menu">
+            <li class=" {if $currentUrl == "http://"|cat:$smarty.server.HTTP_HOST|cat:"/"}activeMenuMobile{/if}"><a href="/">Welcome</a></li>
+            <li  class=" {if $currentUrl == $link->getCategoryLink(2)|escape:'html':'UTF-8'}activeMenuMobile{/if}"><a href="{$link->getCategoryLink(2)|escape:'html':'UTF-8'}">Shop</a></li>
+            <li class=" {if $currentUrl == $link->getCMSLink(6)|escape:'html':'UTF-8'}activeMenuMobile{/if}"><a href="{$link->getCMSLink(6)|escape:'html':'UTF-8'}">Collection</a></li>
+            <li class=" {if $currentUrl == $link->getCMSLink(7)|escape:'html':'UTF-8'}activeMenuMobile{/if}"><a href="{$link->getCMSLink(7)|escape:'html':'UTF-8'}">Mission & Journey</a></li>
+            <li class=" {if $currentUrl == $link->getPageLink('contact',true)|escape:'html':'UTF-8'}activeMenuMobile{/if}"><a href="{$link->getPageLink('contact',true)|escape:'html':'UTF-8'}">Contact</a></li>
+          </ul>
+          <ul id="top-menu-footer">
+          {hook h='displayFooterAfter' mod='ps_socialfollow' id_module=20}
+          </ul>
+        </div>
         <div class="js-top-menu-bottom">
           <div id="_mobile_currency_selector"></div>
           <div id="_mobile_language_selector"></div>
@@ -115,7 +126,7 @@
         </div>
       </div>
     </div>
-    {assign var="currentUrl" value="http://"|cat:$smarty.server.HTTP_HOST|cat:$smarty.server.REQUEST_URI}
+    
 
     <div class="container hidden-md-down">
         <ul class="menu-top">
