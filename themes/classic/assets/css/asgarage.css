@@ -1533,6 +1533,8 @@ a{
 
   /* mission page mobile */
 
+
+
   .mission_banner {
     position: relative !important;
     height: 100% !important;
@@ -1546,7 +1548,16 @@ a{
 
   .mission_banner .banner-title {
     position: relative !important;
-    background: #191919 !important;
+    background: #121212 !important;
+  }
+
+  .mission_banner .banner-title h1 {
+    width: 60%;
+    font-size: 3rem !important;
+    padding-top: 2rem;
+  }
+  .mission_banner .banner-title p {
+    width: 76% !important;
   }
 
   .videosContainer .video img {
@@ -1556,9 +1567,23 @@ a{
 
   .cms-id-7 .mission_statement {
     width: 100%;
-    padding: 4rem 1rem !important;
+    padding: 3rem 1rem !important;
   }
   .cms-id-7 .mission_newsletter {
     padding: 2rem !important;
+  }
+
+  .videosContainer {
+    padding: 2rem 1rem !important;
+  }
+
+  .videosContainer .video .iframeClass {
+    height: 100% !important;
+  }
+
+  .videosContainer .video iframe {
+    height: 200px !important;
+    width: 100% !important;
+    border-radius: 15px !important;
   }
 }
