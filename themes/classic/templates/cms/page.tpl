@@ -155,7 +155,7 @@
               <img src="https://cdn.shopify.com/s/files/1/0625/2013/1789/files/DSC01274_2048x2048.jpg?v=1708615241"  />
             </div>
             <div class="goBackButton">
-            <a href="{$link->getCMSLink(7)|escape:'html':'UTF-8'}">Go back to collection</a>
+            <a href="{$link->getCMSLink(6)|escape:'html':'UTF-8'}">Go back to collection</a>
             </div>
           </div>
         </div>

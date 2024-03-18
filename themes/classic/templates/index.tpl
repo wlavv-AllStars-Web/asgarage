@@ -79,10 +79,12 @@
               <h3>Dodge Daytona</h3>
             </div>
             <div class="card" style="flex:1">
+            <a href="{$link->getCMSLink(8)|escape:'html':'UTF-8'}">
               <div class="card-img" style="overflow:hidden;">
                 <img src="//thehamiltoncollection.com/cdn/shop/articles/DSC01309-Enhanced-NR.jpg?v=1708615700&width=533" />
               </div>
               <h3>Lamborghini Gallardo</h3>
+              </a>
             </div>
             <div class="card" style="flex:1">
               <div class="card-img" style="overflow:hidden;">
