@@ -73,25 +73,25 @@
           <h1>{l s='The Collection' d='Shop.Theme.Collection'}</h1>
           <div class="collection-content" style="display: flex;">
             <div class="card" style="flex:1">
-              <div class="card-img" style="max-height: 172.8px;overflow:hidden;">
+              <div class="card-img" style="overflow:hidden;">
                 <img src="//thehamiltoncollection.com/cdn/shop/articles/DSC00792-1.jpg?v=1708616454&width=533" />
               </div>
               <h3>Dodge Daytona</h3>
             </div>
             <div class="card" style="flex:1">
-              <div class="card-img" style="max-height: 172.8px;overflow:hidden;">
+              <div class="card-img" style="overflow:hidden;">
                 <img src="//thehamiltoncollection.com/cdn/shop/articles/DSC01309-Enhanced-NR.jpg?v=1708615700&width=533" />
               </div>
               <h3>Lamborghini Gallardo</h3>
             </div>
             <div class="card" style="flex:1">
-              <div class="card-img" style="max-height: 172.8px;overflow:hidden;">
+              <div class="card-img" style="overflow:hidden;">
                 <img src="//thehamiltoncollection.com/cdn/shop/articles/DSC08179-Enhanced-SR_1_4.jpg?v=1699578025&width=533" />
               </div>
               <h3>Mercedes G63 4x4²</h3>
             </div>
             <div class="card" style="flex:1">
-              <div class="card-img" style="max-height: 172.8px;overflow:hidden;">
+              <div class="card-img" style="overflow:hidden;">
                 <img src="//thehamiltoncollection.com/cdn/shop/articles/Aventador_SV.jpg?v=1697760992&width=533" />
               </div>
               <h3>Lamborghini Aventador SV Roadster</h3>

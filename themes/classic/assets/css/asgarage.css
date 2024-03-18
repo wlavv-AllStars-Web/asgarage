@@ -1375,6 +1375,18 @@ a{
   gap: 1rem;
   }
 
+  .collection-content .card-img {
+    max-height: 200px;
+  }
+  .collection-content .card h3{
+    padding: 1rem !important;
+    height: 26% !important;
+    font-size: 1.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   .block_newsletter {
     border-bottom: 0 !important;
   }
