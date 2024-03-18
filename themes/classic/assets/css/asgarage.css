@@ -1744,4 +1744,8 @@ a{
   .content_img_container {
     padding: 1rem 1rem 0rem 1rem;
   }
+
+  #product .product-accessories {
+    width: 100% !important;
+  }
 }
