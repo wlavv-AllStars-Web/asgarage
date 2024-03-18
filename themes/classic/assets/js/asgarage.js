@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
     var currentItem = 0;
     var nextButton = document.querySelector("#nextButton");
     var previousButton = document.querySelector("#previousButton");
-    nextButton.style.color = "#fff";
+    nextButton.style.color = "rgba(250, 250, 250, 0.7)";
     previousButton.style.color = "#373737";
 
     function getCarouselPositions() {
@@ -66,14 +66,14 @@ document.addEventListener("DOMContentLoaded", () => {
         if (currentItemIndex === 1) {
             console.log("primeiro")
             previousButton.style.color = "#373737";
-            nextButton.style.color = "#fff";
+            nextButton.style.color = "rgba(250, 250, 250, 0.7)";
         } else if (currentItemIndex === totalItems) {
-            previousButton.style.color = "#fff";
+            previousButton.style.color = "rgba(250, 250, 250, 0.7)";
             nextButton.style.color = "#373737";
             console.log("ultimo")
         } else {
-            previousButton.style.color = "#fff";
-            nextButton.style.color = "#fff";
+            previousButton.style.color = "rgba(250, 250, 250, 0.7)";
+            nextButton.style.color = "rgba(250, 250, 250, 0.7)";
             console.log("meio")
         }
     }

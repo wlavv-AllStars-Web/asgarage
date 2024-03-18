@@ -1350,10 +1350,10 @@ a{
   }
 
   .collection-content .card {
-    min-width: 80vw;
+    /* min-width: 80vw; */
   /* max-height: 200px; */
   overflow: unset;
-  min-width: 80vw;
+  min-width: 100%;
   scroll-snap-align: start;
   }
 
