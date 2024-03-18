@@ -1436,7 +1436,7 @@ a{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 100%;
+    height: 82dvh;
   }
   #mobile_top_menu_wrapper #top-menu{
     display: flex;
