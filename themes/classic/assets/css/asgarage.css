@@ -1466,7 +1466,7 @@ a{
 
   #mobile_top_menu_wrapper #top-menu-footer .block-social ul{
     display: flex;
-    gap: 1rem;
+    gap: 0.5rem;
   }
 
   #mobile_top_menu_wrapper #top-menu-footer .block-social ul li{
@@ -1476,6 +1476,21 @@ a{
 
   .activeMenuMobile {
     background: #191919;
+  }
+
+  .block-social .facebook {
+    background-size: 30px 30px !important;
+  }
+  .block-social .youtube {
+    background-size: 30px 30px !important;
+  }
+  .block-social .instagram {
+    background-size: 26px 31px !important;
+    background-position: center;
+  }
+  .block-social .tiktok {
+    background-size: 22px 30px !important;
+    background-position: center;
   }
 
 }
