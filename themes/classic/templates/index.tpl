@@ -97,6 +97,11 @@
               <h3>Lamborghini Aventador SV Roadster</h3>
             </div>
           </div>
+          <div class="navigation_collection">
+            <button id="previousButton"><</button>
+            <div id="carouselCounter">1/4</div>
+            <button id="nextButton">></button>
+          </div>
           <div class="container-all-product-link">
             <a class="all-product-link float-xs-left float-md-right h4" href="">
               {l s='VIEW ALL' d='Shop.Theme.Catalog'}<i class="material-icons">&#xE315;</i>

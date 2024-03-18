@@ -1236,6 +1236,10 @@ a{
   display: none;
 }
 
+.navigation_collection {
+  display: none;
+}
+
 /* mobile */
 
 @media screen and (max-width:560px) {
@@ -1342,7 +1346,7 @@ a{
   .collection-content {
     width: 100%;
     overflow-x: scroll;
-    scroll-snap-type: x mandatory;
+    scroll-snap-type: x mandatory !important;
   }
 
   .collection-content .card {
@@ -1350,6 +1354,7 @@ a{
   /* max-height: 200px; */
   overflow: unset;
   min-width: 80vw;
+  scroll-snap-align: start;
   }
 
   .footer_container .links .row {
@@ -1376,5 +1381,29 @@ a{
 
   .footer-container .links li {
     background: #121212;
+  }
+
+  .navigation_collection {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .navigation_collection button{
+    background: transparent;
+    border: 0;
+    color: #373737;
+  }
+
+  .newsletterSub input{
+    font-size: 16px;
+  }
+
+  .videoBox h5{
+    padding: 0.5rem;
+  }
+
+  #carouselCounter {
+    color: rgba(250, 250, 250, 0.7);
   }
 }
