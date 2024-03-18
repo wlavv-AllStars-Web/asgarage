@@ -1730,5 +1730,18 @@ a{
     width: 100%;
   }
 
+  .cms-id-8 .goBackButton {
+    padding: 3rem 1rem;
+  }
 
+  .collection_car_content h1 {
+    padding: 1rem !important;
+  }
+  .collection_car_content p {
+    padding: 1rem !important;
+  }
+
+  .content_img_container {
+    padding: 1rem 1rem 0rem 1rem;
+  }
 }
