@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
     var currentItem = 0;
     var nextButton = document.querySelector("#nextButton");
     var previousButton = document.querySelector("#previousButton");
-    nextButton.style.color = "rgba(250, 250, 250, 0.7)";
+    nextButton.style.color = "#fff";
     previousButton.style.color = "#373737";
 
     function getCarouselPositions() {
@@ -66,17 +66,31 @@ document.addEventListener("DOMContentLoaded", () => {
         if (currentItemIndex === 1) {
             console.log("primeiro")
             previousButton.style.color = "#373737";
-            nextButton.style.color = "rgba(250, 250, 250, 0.7)";
+            nextButton.style.color = "#fff";
         } else if (currentItemIndex === totalItems) {
-            previousButton.style.color = "rgba(250, 250, 250, 0.7)";
+            previousButton.style.color = "#fff";
             nextButton.style.color = "#373737";
             console.log("ultimo")
         } else {
-            previousButton.style.color = "rgba(250, 250, 250, 0.7)";
-            nextButton.style.color = "rgba(250, 250, 250, 0.7)";
+            previousButton.style.color = "#fff";
+            nextButton.style.color = "#fff";
             console.log("meio")
         }
     }
+
+    function debounce(func, wait) {
+        let timeout;
+        return function executedFunction(...args) {
+            const later = () => {
+                clearTimeout(timeout);
+                func(...args);
+            };
+            clearTimeout(timeout);
+            timeout = setTimeout(later, wait);
+        };
+    }
+
+    const debouncedUpdateCarouselCounter = debounce(updateCarouselCounter, 100);
 
     function goCarousel(direction) {
         var currentScrollLeft = document.querySelector('.collection-content').scrollLeft;
@@ -112,7 +126,7 @@ document.addEventListener("DOMContentLoaded", () => {
             behavior: 'smooth'
         });
 
-        updateCarouselCounter();
+        debouncedUpdateCarouselCounter();
     }
 
     // Attach event listeners to buttons
@@ -130,5 +144,5 @@ document.addEventListener("DOMContentLoaded", () => {
     // Add resize event listener
     window.addEventListener('resize', getCarouselPositions);
 
-    document.querySelector('.collection-content').addEventListener('scroll', updateCarouselCounter);
+    document.querySelector('.collection-content').addEventListener('scroll', debouncedUpdateCarouselCounter);
 });
