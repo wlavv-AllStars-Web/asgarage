@@ -34,8 +34,12 @@ document.addEventListener("DOMContentLoaded", () => {
     var currentItem = 0;
     var nextButton = document.querySelector("#nextButton");
     var previousButton = document.querySelector("#previousButton");
-    nextButton.style.color = "#fff";
-    previousButton.style.color = "#373737";
+    if(nextButton){
+        nextButton.style.color = "#fff";
+    }
+    if(previousButton){
+        previousButton.style.color = "#373737";
+    }
 
     function getCarouselPositions() {
         carouselPositions = [];
