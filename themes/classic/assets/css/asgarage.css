@@ -1500,6 +1500,10 @@ a{
     color: #373737;
   }
 
+  #index .newsletterSub{
+    padding: 1rem 0;
+  }
+
   .newsletterSub input{
     font-size: 16px;
   }
