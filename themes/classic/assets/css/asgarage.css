@@ -1776,4 +1776,8 @@ a{
   #product .product-accessories {
     width: 100% !important;
   }
+
+  #index #block-newsletter-label {
+    margin-bottom: 0 !important;
+  }
 }
