@@ -1344,6 +1344,10 @@ a{
   color: #121212;
 }
 
+#cms .mission_video iframe {
+  border-radius: 18px;
+}
+
 #search .header-nav {
   background:linear-gradient(310deg, rgba(56, 78, 197, 1) 23%, rgba(255, 58, 129, 0.8) 52%, rgba(255, 201, 104, 1) 95%);
 } 
