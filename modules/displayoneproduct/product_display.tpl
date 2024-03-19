@@ -1,8 +1,9 @@
 {* <pre>{$product|print_r}</pre> *}
 
 <div class="product-display" style="display: flex;">
-    <div class="product-display-img" onclick="location.href='{$product.product_link}';">
-        {hook h='displayHome' mod='ps_banner' id_module=14}
+    <div class="product-display-img" onclick="location.href='{$product.product_link}';" style="display: flex;justify-content:center;">
+        {* {hook h='displayHome' mod='ps_banner' id_module=14} *}
+        <img src="{$product.image_url}" alt="{$product.name}" style="max-height: 400px;border-radius:18px;"> 
     </div>
     <div class="banner_content">
         <h1 style="font-size: 3rem;color:#fff;margin-bottom:1rem;">{$product.name}</h1>
