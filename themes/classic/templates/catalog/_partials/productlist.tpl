@@ -84,7 +84,7 @@
             {foreach from=$products item="product" key="position"}
             
                 {if $product.id_product == 3}
-                    <pre>{$product|print_r}</pre>
+
                         {if $product.cover}
                         <img class="js-qv-product-cover" src="{$product.cover.bySize.large_default.url}" alt="{$product.cover.legend}" title="{$product.cover.legend}" style="" itemprop="image">
                         {/if}
