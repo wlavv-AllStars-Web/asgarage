@@ -93,12 +93,12 @@
                             <h2 style="">Free Simple Pocket T-Shirt</h2>
                             <h5 style="">Spend $100 or more, and get a Simple Pocket T-Shirt for free! Simply add one to your cart and the discount will automatically apply!</h5>
 
-                            <form action="{$currentUrlcart}" method="post" id="add-to-cart-or-refresh">
-                                <input type="hidden" name="token" value="1">
+                            <form action="{"http://"|cat:$smarty.server.HTTP_HOST|cat:"/cart"}" method="post" id="add-to-cart-or-refresh">
+                                {* <input type="hidden" name="token" value="289e416786a67d6e12fd762ba201be83"> *}
                                 <input type="hidden" name="id_product" value="{$product.id_product}" id="product_page_product_id">
-                                {* <input type="hidden" name="id_customization" value="0" id="product_customization_id" class="js-product-customization-id"> *}
+                                <input type="hidden" name="id_customization" value="0" id="product_customization_id" class="js-product-customization-id">
                                 <button class="btn btn-primary add-to-cart" data-button-action="add-to-cart" type="submit">
-                                {l s='Adicionar T-shirt' d='Shop.Theme.Oneproduct'}
+                                {l s='Adicionar ao carrinho' d='Shop.Theme.Oneproduct'}
                                 </button>
                             </form>
                         </div>
