@@ -314,7 +314,7 @@ a{
 }
 
 .newsletterSub .subscribeInput {
-  border: 0.5px solid white;
+  outline: 0.5px solid white;
   padding: 0;
 }
 .newsletterSub .subscribeInput input{
