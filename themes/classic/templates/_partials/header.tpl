@@ -164,10 +164,11 @@
   document.addEventListener("DOMContentLoaded", () => {
     const iconSearch = document.querySelector(".search_container .fa-magnifying-glass")
     const searchInput = document.querySelector(".search_container #search_widget")
-
-    iconSearch.addEventListener("click", () => {
-      searchInput.classList.toggle("search_active")
-    })
+    if(iconSearch){
+      iconSearch.addEventListener("click", () => {
+        searchInput.classList.toggle("search_active")
+      })
+    }
 
   });
 </script>

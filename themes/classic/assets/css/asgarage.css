@@ -1331,6 +1331,14 @@ a{
   color: #191919 !important;
 }
 
+#checkout #header .header-nav {
+  padding: 0 !important;
+  background:linear-gradient(310deg, rgba(56, 78, 197, 1) 23%, rgba(255, 58, 129, 0.8) 52%, rgba(255, 201, 104, 1) 95%);
+}
+
+#search_widget.search_active{
+  display: block !important;
+}
 
 
 /* mobile */
@@ -1417,7 +1425,7 @@ a{
   }
 
   .search_container #search_widget.search_active {
-    display: flex;
+    display: flex !important;
     height: 100px;
     align-items: center;
   }

@@ -29,124 +29,130 @@ function moveQuantityInput() {
 document.addEventListener("DOMContentLoaded", moveQuantityInput);
 
 document.addEventListener("DOMContentLoaded", () => {
-    var carouselPositions;
-    var halfContainer;
-    var currentItem = 0;
     var nextButton = document.querySelector("#nextButton");
-    var previousButton = document.querySelector("#previousButton");
     if(nextButton){
-        nextButton.style.color = "#fff";
-    }
-    if(previousButton){
-        previousButton.style.color = "#373737";
-    }
-
-    function getCarouselPositions() {
-        carouselPositions = [];
-        document.querySelectorAll('.collection-content .card').forEach(function(div) {
-            carouselPositions.push([div.offsetLeft, div.offsetLeft + div.offsetWidth]); // add to array the positions information
-        });
-        halfContainer = document.querySelector('.collection-content').offsetWidth / 2;
-    }
-
-    function updateCarouselCounter() {
-        var currentScrollLeft = document.querySelector('.collection-content').scrollLeft;
-        var currentMiddlePosition = currentScrollLeft + halfContainer;
-
-        // Find the current item index
-        var currentItemIndex;
-        for (var i = 0; i < carouselPositions.length; i++) {
-            if (currentMiddlePosition > carouselPositions[i][0] && currentMiddlePosition < carouselPositions[i][1]) {
-                currentItemIndex = i + 1; // Adding 1 to convert from zero-based index
-                break;
-            }
+        var carouselPositions;
+        var halfContainer;
+        var currentItem = 0;
+        var previousButton = document.querySelector("#previousButton");
+        if(nextButton){
+            nextButton.style.color = "#fff";
         }
-
-        // Update carousel counter
-        var totalItems = carouselPositions.length;
-        document.getElementById('carouselCounter').textContent = currentItemIndex + '/' + totalItems;
-
-        // Update button colors based on current item index
-        if (currentItemIndex === 1) {
-            console.log("primeiro")
+        if(previousButton){
             previousButton.style.color = "#373737";
-            nextButton.style.color = "#fff";
-        } else if (currentItemIndex === totalItems) {
-            previousButton.style.color = "#fff";
-            nextButton.style.color = "#373737";
-            console.log("ultimo")
-        } else {
-            previousButton.style.color = "#fff";
-            nextButton.style.color = "#fff";
-            console.log("meio")
         }
-    }
 
-    function debounce(func, wait) {
-        let timeout;
-        return function executedFunction(...args) {
-            const later = () => {
-                clearTimeout(timeout);
-                func(...args);
-            };
-            clearTimeout(timeout);
-            timeout = setTimeout(later, wait);
-        };
-    }
+        function getCarouselPositions() {
+            carouselPositions = [];
+            document.querySelectorAll('.collection-content .card').forEach(function(div) {
+                carouselPositions.push([div.offsetLeft, div.offsetLeft + div.offsetWidth]); // add to array the positions information
+            });
+            halfContainer = document.querySelector('.collection-content').offsetWidth / 2;
+        }
 
-    const debouncedUpdateCarouselCounter = debounce(updateCarouselCounter, 100);
-
-    function goCarousel(direction) {
-        var currentScrollLeft = document.querySelector('.collection-content').scrollLeft;
-        var currentScrollRight = currentScrollLeft + document.querySelector('.collection-content').offsetWidth;
-
-        if (currentScrollLeft === 0 && direction === 'next') {
-            currentItem = 1;
-        } else if (currentScrollRight === document.querySelector('.collection-content').scrollWidth && direction === 'previous') {
-            currentItem = carouselPositions.length - 2;
-        } else {
+        function updateCarouselCounter() {
+            var currentScrollLeft = document.querySelector('.collection-content').scrollLeft;
             var currentMiddlePosition = currentScrollLeft + halfContainer;
+
+            // Find the current item index
+            var currentItemIndex;
             for (var i = 0; i < carouselPositions.length; i++) {
                 if (currentMiddlePosition > carouselPositions[i][0] && currentMiddlePosition < carouselPositions[i][1]) {
-                    currentItem = i;
-                    if (direction === 'next') {
-                        currentItem++;
-                    } else if (direction === 'previous') {
-                        currentItem--;
-                    }
-
-                    if (currentItem < 0) {
-                        currentItem = 0;
-                    } else if (currentItem >= carouselPositions.length) {
-                        currentItem = carouselPositions.length - 1;
-                    }
+                    currentItemIndex = i + 1; // Adding 1 to convert from zero-based index
                     break;
                 }
             }
+
+            // Update carousel counter
+            var totalItems = carouselPositions.length;
+            if(document.getElementById('carouselCounter')){
+            document.getElementById('carouselCounter').textContent = currentItemIndex + '/' + totalItems;
+            }
+            // Update button colors based on current item index
+            if (currentItemIndex === 1) {
+                console.log("primeiro")
+                previousButton.style.color = "#373737";
+                nextButton.style.color = "#fff";
+            } else if (currentItemIndex === totalItems) {
+                previousButton.style.color = "#fff";
+                nextButton.style.color = "#373737";
+                console.log("ultimo")
+            } else {
+                previousButton.style.color = "#fff";
+                nextButton.style.color = "#fff";
+                console.log("meio")
+            }
         }
 
-        document.querySelector('.collection-content').scrollTo({
-            left: carouselPositions[currentItem][0],
-            behavior: 'smooth'
-        });
+        function debounce(func, wait) {
+            let timeout;
+            return function executedFunction(...args) {
+                const later = () => {
+                    clearTimeout(timeout);
+                    func(...args);
+                };
+                clearTimeout(timeout);
+                timeout = setTimeout(later, wait);
+            };
+        }
 
-        debouncedUpdateCarouselCounter();
+        const debouncedUpdateCarouselCounter = debounce(updateCarouselCounter, 100);
+
+        function goCarousel(direction) {
+            var currentScrollLeft = document.querySelector('.collection-content').scrollLeft;
+            var currentScrollRight = currentScrollLeft + document.querySelector('.collection-content').offsetWidth;
+
+            if (currentScrollLeft === 0 && direction === 'next') {
+                currentItem = 1;
+            } else if (currentScrollRight === document.querySelector('.collection-content').scrollWidth && direction === 'previous') {
+                currentItem = carouselPositions.length - 2;
+            } else {
+                var currentMiddlePosition = currentScrollLeft + halfContainer;
+                for (var i = 0; i < carouselPositions.length; i++) {
+                    if (currentMiddlePosition > carouselPositions[i][0] && currentMiddlePosition < carouselPositions[i][1]) {
+                        currentItem = i;
+                        if (direction === 'next') {
+                            currentItem++;
+                        } else if (direction === 'previous') {
+                            currentItem--;
+                        }
+
+                        if (currentItem < 0) {
+                            currentItem = 0;
+                        } else if (currentItem >= carouselPositions.length) {
+                            currentItem = carouselPositions.length - 1;
+                        }
+                        break;
+                    }
+                }
+            }
+
+            document.querySelector('.collection-content').scrollTo({
+                left: carouselPositions[currentItem][0],
+                behavior: 'smooth'
+            });
+
+            debouncedUpdateCarouselCounter();
+        }
+
+        // Attach event listeners to buttons
+        if(previousButton){
+            document.getElementById('previousButton').addEventListener('click', function() {
+                goCarousel('previous');
+            });
+        }
+        if(nextButton){
+            document.getElementById('nextButton').addEventListener('click', function() {
+                goCarousel('next');
+            });
+        }
+
+        // Call the function to initialize
+        getCarouselPositions();
+
+        // Add resize event listener
+        window.addEventListener('resize', getCarouselPositions);
+
+        document.querySelector('.collection-content').addEventListener('scroll', debouncedUpdateCarouselCounter);
     }
-
-    // Attach event listeners to buttons
-    document.getElementById('previousButton').addEventListener('click', function() {
-        goCarousel('previous');
-    });
-
-    document.getElementById('nextButton').addEventListener('click', function() {
-        goCarousel('next');
-    });
-
-    // Call the function to initialize
-    getCarouselPositions();
-
-    // Add resize event listener
-    window.addEventListener('resize', getCarouselPositions);
-
-    document.querySelector('.collection-content').addEventListener('scroll', debouncedUpdateCarouselCounter);
 });
