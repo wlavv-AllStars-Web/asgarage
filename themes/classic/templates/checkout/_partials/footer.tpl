@@ -38,6 +38,6 @@
     <span class="d-block js-terms">{$tos_cms nofilter}</span>
   {/if}
   {block name='copyright_link'}
-    {l s='%copyright% %year% - Ecommerce software by %prestashop%' sprintf=['%prestashop%' => 'PrestaShop™', '%year%' => 'Y'|date, '%copyright%' => '©'] d='Shop.Theme.Global'}
+    {l s='%copyright% %year% - %prestashop%' sprintf=['%prestashop%' => 'All Stars Garage™', '%year%' => 'Y'|date, '%copyright%' => '©'] d='Shop.Theme.Global'}
   {/block}
 </div>
