@@ -94,9 +94,9 @@
                             <h5 style="">Spend $100 or more, and get a Simple Pocket T-Shirt for free! Simply add one to your cart and the discount will automatically apply!</h5>
 
                             <form action="{$currentUrlcart}" method="post" id="add-to-cart-or-refresh">
-                                <input type="hidden" name="token" value="">
+                                {* <input type="hidden" name="token" value=""> *}
                                 <input type="hidden" name="id_product" value="{$product.id_product}" id="product_page_product_id">
-                                <input type="hidden" name="id_customization" value="0" id="product_customization_id" class="js-product-customization-id">
+                                {* <input type="hidden" name="id_customization" value="0" id="product_customization_id" class="js-product-customization-id"> *}
                                 <button class="btn btn-primary add-to-cart" data-button-action="add-to-cart" type="submit">
                                 {l s='Adicionar T-shirt' d='Shop.Theme.Oneproduct'}
                                 </button>
