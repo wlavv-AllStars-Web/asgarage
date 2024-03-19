@@ -31,9 +31,9 @@
           <div class="container">
             <div class="row">
             <div class="header-bottom-content">
-              <h1>Want to Drive a Hyper/Supercar from the Collection?</h1>
-              <h6>Sign up for a rental slot below!</h6>
-              <div class="btn">Schedule Rental Here!</div>
+              <h1>{l s='Want to Drive a Hyper/Supercar from the Collection?' d='Shop.Theme.Homepage'}</h1>
+              <h6>{l s='Sign up for a rental slot below!' d='Shop.Theme.Homepage'}</h6>
+              <div class="btn">{l s='Schedule Rental Here!' d='Shop.Theme.Homepage'}</div>
             </div>
             </div>
           </div>
@@ -45,8 +45,8 @@
               </video>
             </div>
             <div class="" style="background: #373737;padding:2rem 0">
-              <h1 style="color: #fafafa;text-align:center;font-size:3rem;">Driven to Give Back.</h1>
-              <h5 style="color: #c9c9c9;text-align:center;font-size:1.25rem;">To enrich the lives of others by providing unparalleled access to unique and exotic vehicles and to have a lot of fun while doing it.</h5>
+              <h1 style="color: #fafafa;text-align:center;font-size:3rem;">{l s='Driven to Give Back.' d='Shop.Theme.Homepage'}</h1>
+              <h5 style="color: #c9c9c9;text-align:center;font-size:1.25rem;">{l s='To enrich the lives of others by providing unparalleled access to unique and exotic vehicles and to have a lot of fun while doing it.' d='Shop.Theme.Homepage'}</h5>
             </div>
           </div>
         {* {block name='page_content'}
@@ -62,9 +62,9 @@
               <img src="https://thehamiltoncollection.com/cdn/shop/files/website__4_Large_467d6ef1-c747-4e4e-8f97-7d3b5c56d1c7.jpg?v=1664430332&width=750" style="width: 100%;height:100%;object-fit:cover !important;"/>
             </div>
             <div class="mission-journey-content">
-              <h1>{l s='Mission & Journey' d='Shop.Theme.Mission'}</h1>
-              <p>{l s='My mission for the collection now is simple: I am driven to give back. I put the cars to use by taking them out to charity events to help spread awareness or raise money for important causes. As the collection grows...' d='Shop.Theme.Mission'}</p>
-              <a href="{$link->getCMSLink(7)|escape:'html':'UTF-8'}" class="btn_read_more">{l s='Read More' d='Shop.Theme.Mission'}</a>
+              <h1>{l s='Mission & Journey' d='Shop.Theme.Homepage'}</h1>
+              <p>{l s='My mission for the collection now is simple: I am driven to give back. I put the cars to use by taking them out to charity events to help spread awareness or raise money for important causes. As the collection grows...' d='Shop.Theme.Homepage'}</p>
+              <a href="{$link->getCMSLink(7)|escape:'html':'UTF-8'}" class="btn_read_more">{l s='Read More' d='Shop.Theme.Homepage'}</a>
             </div>
           </div>
         </div>
@@ -106,7 +106,7 @@
           </div>
           <div class="container-all-product-link">
             <a class="all-product-link float-xs-left float-md-right h4" href="{$link->getCMSLink(6)|escape:'html':'UTF-8'}"">
-              {l s='VIEW ALL' d='Shop.Theme.Catalog'}<i class="material-icons">&#xE315;</i>
+              {l s='VIEW ALL' d='Shop.Theme.Homepage'}<i class="material-icons">&#xE315;</i>
             </a>
           </div>
         </div>
