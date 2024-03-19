@@ -25,6 +25,7 @@
 
 {capture assign="productClasses"}{if !empty($productClass)}{$productClass}{else}col-xs-12 col-sm-6 col-xl-4{/if}{/capture}
 {assign var="currentUrl" value="http://"|cat:$smarty.server.HTTP_HOST|cat:$smarty.server.REQUEST_URI}
+{assign var="currentUrlcart" value="http://"|cat:$smarty.server.HTTP_HOST|cat:"/cart"}
 <div class="products{if !empty($cssClass)} {$cssClass}{/if}">
     {if $currentUrl == $link->getCategoryLink(2)}
         <div class="clothes" style="width: 1440px;margin:auto;">
@@ -83,16 +84,17 @@
             {foreach from=$products item="product" key="position"}
             
                 {if $product.id_product == 3}
+                    <pre>{$product|print_r}</pre>
                         {if $product.cover}
                         <img class="js-qv-product-cover" src="{$product.cover.bySize.large_default.url}" alt="{$product.cover.legend}" title="{$product.cover.legend}" style="" itemprop="image">
-                      {/if}
+                        {/if}
                         {* {include file="catalog/_partials/miniatures/product.tpl" product=$product position=$position productClasses=$productClasses} *}
                         <div class="banner_content" style="">
                             <h2 style="">Free Simple Pocket T-Shirt</h2>
                             <h5 style="">Spend $100 or more, and get a Simple Pocket T-Shirt for free! Simply add one to your cart and the discount will automatically apply!</h5>
 
-                            <form action="http://192.168.1.64:82/cart" method="post" id="add-to-cart-or-refresh">
-                                <input type="hidden" name="token" value="289e416786a67d6e12fd762ba201be83">
+                            <form action="{$currentUrlcart}" method="post" id="add-to-cart-or-refresh">
+                                <input type="hidden" name="token" value="">
                                 <input type="hidden" name="id_product" value="{$product.id_product}" id="product_page_product_id">
                                 <input type="hidden" name="id_customization" value="0" id="product_customization_id" class="js-product-customization-id">
                                 <button class="btn btn-primary add-to-cart" data-button-action="add-to-cart" type="submit">
