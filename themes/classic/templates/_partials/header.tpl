@@ -83,7 +83,11 @@
           </div>
           <div class="float-xs-right" id="_mobile_cart"></div>
           <div class="float-xs-right" id="_mobile_user_info"></div>
-          <a href="/"><div class="top-logo" id="_mobile_logo"></div></a>
+          <a href="/">
+            <div class="top-logo" id="_mobile_logo">
+              <img src="//thehamiltoncollection.com/cdn/shop/files/New_logo.png?v=1670879737" width="100" height="68">
+            </div>
+          </a>
           <div class="clearfix"></div>
         </div>
 

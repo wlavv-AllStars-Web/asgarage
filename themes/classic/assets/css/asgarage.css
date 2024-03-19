@@ -1784,4 +1784,26 @@ a{
   #index .newsletterSub .subscribeInput {
     margin-top: 1rem !important;
   }
+
+  #checkout .header-nav {
+    background:linear-gradient(310deg, rgba(56, 78, 197, 1) 23%, rgba(255, 58, 129, 0.8) 52%, rgba(255, 201, 104, 1) 95%);
+  }
+
+  #checkout .header-nav .mobile {
+    background: #191919;
+  }
+
+  #checkout #menu-icon {
+    min-height: 70px;
+  }
+  #checkout #_mobile_cart {
+    min-height: 70px;
+  }
+  #checkout #_mobile_user_info i {
+    color: #fff;
+  }
+  #checkout .blockcart {
+    min-height: 70px;
+    background: transparent !important;
+  }
 }
