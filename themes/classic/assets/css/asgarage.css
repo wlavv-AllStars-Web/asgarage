@@ -1780,4 +1780,8 @@ a{
   #index #block-newsletter-label {
     margin-bottom: 0 !important;
   }
+
+  #index .newsletterSub .subscribeInput {
+    margin-top: 1rem !important;
+  }
 }
