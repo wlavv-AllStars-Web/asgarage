@@ -64,7 +64,7 @@
             <div class="mission-journey-content">
               <h1>{l s='Mission & Journey' d='Shop.Theme.Mission'}</h1>
               <p>{l s='My mission for the collection now is simple: I am driven to give back. I put the cars to use by taking them out to charity events to help spread awareness or raise money for important causes. As the collection grows...' d='Shop.Theme.Mission'}</p>
-              <a class="btn_read_more">{l s='Read More' d='Shop.Theme.Mission'}</a>
+              <a href="{$link->getCMSLink(7)|escape:'html':'UTF-8'}" class="btn_read_more">{l s='Read More' d='Shop.Theme.Mission'}</a>
             </div>
           </div>
         </div>
