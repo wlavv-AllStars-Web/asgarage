@@ -85,7 +85,7 @@
           <div class="float-xs-right" id="_mobile_user_info"></div>
           <a href="/">
             <div class="top-logo" id="_mobile_logo">
-              <img src="//thehamiltoncollection.com/cdn/shop/files/New_logo.png?v=1670879737" width="100" height="68">
+              <img src="/img/ASGarage.png" width="100" width="auto">
             </div>
           </a>
           <div class="clearfix"></div>
@@ -101,7 +101,7 @@
           </div>
         </div>
         <div class="col-md-2  hidden-md-down" id="_desktop_logo" style="display: flex;justify-content:center;">
-          <img src="//thehamiltoncollection.com/cdn/shop/files/New_logo.png?v=1670879737" width="100" height="68">
+          <img src="/img/ASGarage.png" width="100" width="auto">
         </div>
         <div class="col-md-5  hidden-md-down" style="display: flex;justify-content:end;">
           {hook h='displayNav2' mod='ps_shoppingcart' id_module=9}
