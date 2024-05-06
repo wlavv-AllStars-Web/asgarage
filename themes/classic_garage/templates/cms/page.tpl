@@ -38,7 +38,7 @@
         <div class="collection_banner">
           <img src="//thehamiltoncollection.com/cdn/shop/files/IMG_6527-Edit_copy_78c1643c-98d3-41bf-90bd-da2d627ce3a6.jpg?v=1664478525&width=1500" style="width: 100%;"/>
           <div class="banner-title">
-            <h1>The Fleet</h1>
+            <h1>{l s='The Fleet' d='Shop.Theme.Asgarage'}</h1>
           </div>
         </div>
         <div class="collection_container">
@@ -82,8 +82,8 @@
         <div class="mission_banner">
           <img src="//thehamiltoncollection.com/cdn/shop/files/017FEE00-2576-4B7A-89A8-79715654691C.jpg?v=1664478058&width=1500" style="width: 100%;"/>
           <div class="banner-title">
-            <h1>Driven to Give Back</h1>
-            <p>To enrich the lives of others by providing unparalleled access to unique and exotic vehicles and to have a lot of fun while doing it.</p>
+            <h1>{l s='Driven to Give Back' d='Shop.Theme.Asgarage'}</h1>
+            <p>{l s='To enrich the lives of others by providing unparalleled access to unique and exotic vehicles and to have a lot of fun while doing it.' d='Shop.Theme.Asgarage'}</p>
           </div>
         </div>
         <div class="mission_content">
@@ -109,14 +109,14 @@
             </div>
 
             <div class="mission_statement">
-              <h1>Mission Statement</h1>
-              <p>Hi, my name is Steve Hamilton! Here is a little about me.</p>
+              <h1>{l s='Mission Statement' d='Shop.Theme.Asgarage'}</h1>
+              <p>{l s='Hi, my name is Steve Hamilton! Here is a little about me.' d='Shop.Theme.Asgarage'}</p>
               <br>
-              <p>Growing up, my family lived off of welfare. I didn’t have money to play sports, go on field trips, or sometimes to even buy new clothes. I worked my way through my teenage years whether it was being a caddie at the age of 13, flipping burgers at McDonald’s at 14 or fixing bikes as a side hustle. Luckily, I was born with that entrepreneurial spirit. I don’t regret my childhood, though. It is what made me who I am today.</p>
+              <p>{l s='Growing up, my family lived off of welfare. I didn’t have money to play sports, go on field trips, or sometimes to even buy new clothes. I worked my way through my teenage years whether it was being a caddie at the age of 13, flipping burgers at McDonald’s at 14 or fixing bikes as a side hustle. Luckily, I was born with that entrepreneurial spirit. I don’t regret my childhood, though. It is what made me who I am today.' d='Shop.Theme.Asgarage'}</p>
               <br>
-              <p>My mission for the collection now is simple: I am driven to give back. I put the cars to use by taking them out to charity events to help spread awareness or raise money for important causes. As the collection grows, I am committed to continuing to let car enthusiasts of all ages enjoy the vehicles and remain focused on using the collection to make the world a better place.</p>
+              <p>{l s='My mission for the collection now is simple: I am driven to give back. I put the cars to use by taking them out to charity events to help spread awareness or raise money for important causes. As the collection grows, I am committed to continuing to let car enthusiasts of all ages enjoy the vehicles and remain focused on using the collection to make the world a better place.' d='Shop.Theme.Asgarage'}</p>
               <br>
-              <p>On top of all of that? These cars aren’t trophies to me. They are vehicles, and they are meant to be driven. So we’re also going to have plenty of fun along the way!</p>
+              <p>{l s='On top of all of that? These cars aren’t trophies to me. They are vehicles, and they are meant to be driven. So we’re also going to have plenty of fun along the way!' d='Shop.Theme.Asgarage'}</p>
             </div>
 
 
@@ -155,7 +155,7 @@
               <img src="https://cdn.shopify.com/s/files/1/0625/2013/1789/files/DSC01274_2048x2048.jpg?v=1708615241"  />
             </div>
             <div class="goBackButton">
-            <a href="{$link->getCMSLink(6)|escape:'html':'UTF-8'}">Go back to collection</a>
+            <a href="{$link->getCMSLink(6)|escape:'html':'UTF-8'}">{l s='Go back to collection' d='Shop.Theme.Asgarage'}</a>
             </div>
           </div>
         </div>

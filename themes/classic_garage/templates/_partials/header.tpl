@@ -40,7 +40,7 @@
               {hook h='displayNav2'}
           </div> *}
           <div class="col-md-12 col-xs-12" style="display: flex;justify-content:center;height:50px">
-            <a class="animate-arrow">Schedule Collection Tour Here!
+            <a class="animate-arrow">{l s='Schedule Collection Tour Here!' d='Shop.Theme.Asgarage'}
             {* <i class="fa-solid fa-arrow-right-long" style="color: #121212;font-size: 1.5rem;margin-block:auto;margin-left:1rem;"></i> *}
             <svg viewBox="0 0 14 10" fill="none" aria-hidden="true" focusable="false" role="presentation" class="icon icon-arrow" xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd" clip-rule="evenodd" d="M8.537.808a.5.5 0 01.817-.162l4 4a.5.5 0 010 .708l-4 4a.5.5 0 11-.708-.708L11.793 5.5H1a.5.5 0 010-1h10.793L8.646 1.354a.5.5 0 01-.109-.546z" fill="currentColor">
@@ -103,7 +103,8 @@
         <div class="col-md-2  hidden-md-down" id="_desktop_logo" style="display: flex;justify-content:center;">
           <img src="/img/ASGarage.png" width="100" width="auto">
         </div>
-        <div class="col-md-5  hidden-md-down" style="display: flex;justify-content:end;">
+        <div class="col-md-5  hidden-md-down" style="display: flex;justify-content:end;gap:1rem;">
+          {hook h='displayNav2' mod='ps_languageselector'}
           {hook h='displayNav2' mod='ps_shoppingcart' id_module=9}
         </div>
         {* <div class="header-top-right col-md-10 col-sm-12 position-static">
@@ -113,11 +114,11 @@
       <div id="mobile_top_menu_wrapper" class="row hidden-md-up" style="display:none;">
         <div class="js-top-menu mobile" >
           <ul id="top-menu">
-            <li class=" {if $currentUrl == "http://"|cat:$smarty.server.HTTP_HOST|cat:"/"}activeMenuMobile{/if}"><a href="/">Welcome</a></li>
-            <li  class=" {if $currentUrl == $link->getCategoryLink(2)|escape:'html':'UTF-8'}activeMenuMobile{/if}"><a href="{$link->getCategoryLink(2)|escape:'html':'UTF-8'}">Shop</a></li>
-            <li class=" {if $currentUrl == $link->getCMSLink(6)|escape:'html':'UTF-8'}activeMenuMobile{/if}"><a href="{$link->getCMSLink(6)|escape:'html':'UTF-8'}">Collection</a></li>
-            <li class=" {if $currentUrl == $link->getCMSLink(7)|escape:'html':'UTF-8'}activeMenuMobile{/if}"><a href="{$link->getCMSLink(7)|escape:'html':'UTF-8'}">Mission & Journey</a></li>
-            <li class=" {if $currentUrl == $link->getPageLink('contact',true)|escape:'html':'UTF-8'}activeMenuMobile{/if}"><a href="{$link->getPageLink('contact',true)|escape:'html':'UTF-8'}">Contact</a></li>
+            <li class=" {if $currentUrl == "http://"|cat:$smarty.server.HTTP_HOST|cat:"/"}activeMenuMobile{/if}"><a href="/">{l s='Welcome' d='Shop.Theme.Menu'}</a></li>
+            <li  class=" {if $currentUrl == $link->getCategoryLink(2)|escape:'html':'UTF-8'}activeMenuMobile{/if}"><a href="{$link->getCategoryLink(2)|escape:'html':'UTF-8'}">{l s='Shop' d='Shop.Theme.Menu'}</a></li>
+            <li class=" {if $currentUrl == $link->getCMSLink(6)|escape:'html':'UTF-8'}activeMenuMobile{/if}"><a href="{$link->getCMSLink(6)|escape:'html':'UTF-8'}">{l s='Collection' d='Shop.Theme.Menu'}</a></li>
+            <li class=" {if $currentUrl == $link->getCMSLink(7)|escape:'html':'UTF-8'}activeMenuMobile{/if}"><a href="{$link->getCMSLink(7)|escape:'html':'UTF-8'}">{l s='Mission & Journey' d='Shop.Theme.Menu'}</a></li>
+            <li class=" {if $currentUrl == $link->getPageLink('contact',true)|escape:'html':'UTF-8'}activeMenuMobile{/if}"><a href="{$link->getPageLink('contact',true)|escape:'html':'UTF-8'}">{l s='Contact' d='Shop.Theme.Menu'}</a></li>
           </ul>
           <ul id="top-menu-footer">
           {hook h='displayFooterAfter' mod='ps_socialfollow' id_module=20}
@@ -134,11 +135,11 @@
 
     <div class="container hidden-md-down">
         <ul class="menu-top">
-          <li><a class=" {if $currentUrl == "http://"|cat:$smarty.server.HTTP_HOST|cat:"/"}activeMenu{/if}" href="/">Welcome</a></li>
-          <li><a class=" {if $currentUrl == $link->getCategoryLink(2)|escape:'html':'UTF-8'}activeMenu{/if}" href="{$link->getCategoryLink(2)|escape:'html':'UTF-8'}">Shop</a></li>
-          <li><a class=" {if $currentUrl == $link->getCMSLink(6)|escape:'html':'UTF-8'}activeMenu{/if}" href="{$link->getCMSLink(6)|escape:'html':'UTF-8'}">Collection</a></li>
-          <li><a class=" {if $currentUrl == $link->getCMSLink(7)|escape:'html':'UTF-8'}activeMenu{/if}"  href="{$link->getCMSLink(7)|escape:'html':'UTF-8'}">Mission & Journey</a></li>
-          <li><a class=" {if $currentUrl == $link->getPageLink('contact',true)|escape:'html':'UTF-8'}activeMenu{/if}"  href="{$link->getPageLink('contact',true)|escape:'html':'UTF-8'}">Contact</a></li>
+          <li><a class=" {if $currentUrl == "http://"|cat:$smarty.server.HTTP_HOST|cat:"/"}activeMenu{/if}" href="/">{l s='Welcome' d='Shop.Theme.Menu'}</a></li>
+          <li><a class=" {if $currentUrl == $link->getCategoryLink(2)|escape:'html':'UTF-8'}activeMenu{/if}" href="{$link->getCategoryLink(2)|escape:'html':'UTF-8'}">{l s='Shop' d='Shop.Theme.Menu'}</a></li>
+          <li><a class=" {if $currentUrl == $link->getCMSLink(6)|escape:'html':'UTF-8'}activeMenu{/if}" href="{$link->getCMSLink(6)|escape:'html':'UTF-8'}">{l s='Collection' d='Shop.Theme.Menu'}</a></li>
+          <li><a class=" {if $currentUrl == $link->getCMSLink(7)|escape:'html':'UTF-8'}activeMenu{/if}"  href="{$link->getCMSLink(7)|escape:'html':'UTF-8'}">{l s='Mission & Journey' d='Shop.Theme.Menu'}</a></li>
+          <li><a class=" {if $currentUrl == $link->getPageLink('contact',true)|escape:'html':'UTF-8'}activeMenu{/if}"  href="{$link->getPageLink('contact',true)|escape:'html':'UTF-8'}">{l s='Contact' d='Shop.Theme.Menu'}</a></li>
         </ul>
     </div>
   </div>

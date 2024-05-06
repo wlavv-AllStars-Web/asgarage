@@ -38,8 +38,8 @@
  
     {if $currentUrl == $link->getCategoryLink(2)}
     <div class="header-shop">
-      <h1>Limited Quantities!</h1>
-      <h3>Make sure to get some of these designs before they leave the collection!</h3>
+      <h1>{l s='Limited Quantities!' d='Shop.Theme.Asgarage'}</h1>
+      <h3>{l s='Make sure to get some of these designs before they leave the collection!' d='Shop.Theme.Asgarage'}</h3>
     </div>  
     {/if}
 

@@ -50,7 +50,7 @@
     align-items: center;
     font-size: 3rem;
     color: #fff;
-    background: rgba(0,0,0,0.5);">Contact Us</h1>
+    background: rgba(0,0,0,0.5);">{l s='Contact Us' d='Shop.Theme.Asgarage'}</h1>
   </div>
   {hook h='displayContactContent'}
 {/block}

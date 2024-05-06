@@ -80,7 +80,7 @@
             {include file='catalog/_partials/product-prices.tpl'}
           {/block}
 
-          <p><a style="text-decoration: underline;">Shipping</a> calculated at checkout.</p>
+          <p><a style="text-decoration: underline;">{l s='Shipping' d='Shop.Theme.Asgarage'}</a> {l s='calculated at checkout.' d='Shop.Theme.Asgarage'}</p>
 
           <div class="product-information">
             {block name='product_description_short'}

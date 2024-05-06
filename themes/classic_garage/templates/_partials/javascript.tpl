@@ -38,4 +38,4 @@
     {/foreach}
   </script>
 {/if}
-<script type="text/javascript" src="/themes/classic/assets/js/asgarage.js" defer></script>
+<script type="text/javascript" src="/themes/classic_garage/assets/js/asgarage.js" defer></script>

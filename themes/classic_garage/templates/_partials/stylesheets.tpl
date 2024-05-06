@@ -26,7 +26,7 @@
  {foreach $stylesheets.external as $stylesheet}
   <link rel="stylesheet" href="{$stylesheet.uri}" type="text/css" media="{$stylesheet.media}">
 {/foreach}
-<link rel="stylesheet" href="/themes/classic/assets/css/asgarage.css" type="text/css" media="{$stylesheet.media}" />
+<link rel="stylesheet" href="/themes/classic_garage/assets/css/asgarage.css" type="text/css" media="{$stylesheet.media}" />
 
 {foreach $stylesheets.inline as $stylesheet}
   <style>
