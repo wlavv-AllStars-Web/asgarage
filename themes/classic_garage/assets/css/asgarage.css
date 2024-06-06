@@ -93,7 +93,8 @@ a{
     background: #121212 !important;
   }
   #index {
-    background: linear-gradient(310deg, rgba(56, 78, 197, 1) 23%, rgba(255, 58, 129, 0.8) 52%, rgba(255, 201, 104, 1) 95%);
+    /* background: linear-gradient(310deg, rgba(56, 78, 197, 1) 23%, rgba(255, 58, 129, 0.8) 52%, rgba(255, 201, 104, 1) 95%); */
+    background: linear-gradient(36deg, rgba(224,0,0,1) 0%, rgba(255,128,128,1) 83%);
   }
 
   #index #wrapper{
@@ -1570,6 +1571,7 @@ body#checkout .cart-grid-right .card span {
     width: 100%;
     max-height: none;
     object-fit: contain;
+    max-width: 60px;
   }
   .header-top #_mobile_cart {
     height: 68px;
